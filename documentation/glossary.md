@@ -66,11 +66,68 @@ many-many: many tutoring service can hire many different tutors<br />
 login_user-Applies To-scholarship<br />
 many-many: many users can apply to many scholarships<br />
 <br />
-login_user-Applies To-company<br />
-many-many: many users can apply to many companies<br />
+login_user-Applies To-jobs<br />
+many-many: many users can apply to many jobbs<br />
 <br />
 company-Offers-job_opportunity<br />
 many-many: many companies can offer many opportunities<br />
-
-
+## Attribute
+scholarship
+- **id**(primary key)
+- name
+- description 
+- requirement 
+- award_amount
+- deadline
+job_opportunity
+- **job_id**
+- job_descripiton
+- application
+- benefit_desciption
+- salary
+- position_title
+tutoring_service
+- **service_id**
+- location
+- total_tutors
+- operation_hours
+- name
+- contact_info
+tutor
+- **fullname**
+- grade_level
+- cost
+- subject 
+- contact
+company
+- **company_id**
+- address
+- review
+- name
+- industry
+academic_resource
+- **id**
+- description 
+- name
+- subject
+- payment_method
+legal_resource
+- **rsource_id**
+- location
+- name
+- contact_info
+- cost
+- description 
+health_resource
+- **id**
+- contact
+- health_type
+- location
+- service_description
+- payment
+login_user
+- **user_id**
+- username
+- password 
+- date_time
 
