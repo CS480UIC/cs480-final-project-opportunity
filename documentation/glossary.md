@@ -78,53 +78,53 @@ scholarship
 - description 
 - requirement 
 - award_amount
-- deadline
+- deadline<br />
 job_opportunity
 - **job_id**
 - job_descripiton
 - application
 - benefit_desciption
 - salary
-- position_title
+- position_title<br />
 tutoring_service
 - **service_id**
 - location
 - total_tutors
 - operation_hours
 - name
-- contact_info
+- contact_info<br />
 tutor
 - **fullname**
 - grade_level
 - cost
 - subject 
-- contact
+- contact<br />
 company
 - **company_id**
 - address
 - review
 - name
-- industry
+- industry<br />
 academic_resource
 - **id**
 - description 
 - name
 - subject
-- payment_method
+- payment_method<br />
 legal_resource
 - **rsource_id**
 - location
 - name
 - contact_info
 - cost
-- description 
+- description <br />
 health_resource
 - **id**
 - contact
 - health_type
 - location
 - service_description
-- payment
+- payment<br />
 login_user
 - **user_id**
 - username
