@@ -72,62 +72,62 @@ many-many: many users can apply to many jobbs<br />
 company-Offers-job_opportunity<br />
 many-many: many companies can offer many opportunities<br />
 ## Attribute
-scholarship
-- **id**(primary key)
-- name
-- description 
-- requirement 
-- award_amount
-- deadline<br />
-job_opportunity
-- **job_id**
-- job_descripiton
-- application
-- benefit_desciption
-- salary
-- position_title<br />
-tutoring_service
-- **service_id**
-- location
-- total_tutors
-- operation_hours
-- name
-- contact_info<br />
-tutor
-- **fullname**
-- grade_level
-- cost
-- subject 
-- contact<br />
-company
-- **company_id**
-- address
-- review
-- name
-- industry<br />
-academic_resource
-- **id**
-- description 
-- name
-- subject
-- payment_method<br />
-legal_resource
-- **rsource_id**
-- location
-- name
-- contact_info
-- cost
-- description <br />
-health_resource
-- **id**
-- contact
-- health_type
-- location
-- service_description
-- payment<br />
-login_user
-- **user_id**
-- username
-- password 
-- date_time
+1. scholarship
+   - **id**(primary key)
+   - name
+   - description 
+   - requirement 
+   - award_amount
+   - deadline
+2. job_opportunity
+   - **job_id**
+   - job_descripiton
+   - application
+   - benefit_desciption
+   - salary
+   - position_title
+3. tutoring_service
+   - **service_id**
+   - location
+   - total_tutors
+   - operation_hours
+   - name
+   - contact_info
+4. tutor
+   - **fullname**
+   - grade_level
+   - cost
+   - subject 
+   - contact<br />
+5. company
+   - **company_id**
+   - address
+   - review
+   - name
+   - industry<br />
+6. academic_resource
+   - **id**
+   - description 
+   - name
+   - subject
+   - payment_method<br />
+7. legal_resource
+   - **rsource_id**
+   - location
+   - name
+   - contact_info
+   - cost
+   - description <br />
+8. health_resource
+   - **id**
+   - contact
+   - health_type
+   - location
+   - service_description
+   - payment<br />
+9. login_user
+   - **user_id**
+   - username
+   - password 
+   - date_time
 
