@@ -47,7 +47,7 @@ Entity Name: login_user <br />
 Synonyms: Login credential<br />
 Description: A account infomation for user including username and password<br />
 
-## Relationship
+## Relationships
 login_user-Uses-academic_resource<br />
 many-many: many users can use different resources<br />
 <br />
@@ -71,7 +71,7 @@ many-many: many users can apply to many jobbs<br />
 <br />
 company-Offers-job_opportunity<br />
 many-many: many companies can offer many opportunities<br />
-## Attribute
+## Attributes
 1. scholarship
    - **id**(primary key)
    - name
