@@ -10,6 +10,10 @@
 - health_resource
 - login_user
 
+## Assumptions
+- Each tutor is matched to exactly one tutoring service
+- Each job_opporunity is matched to exactly one company  
+
 ## Synonyms and descriptions
 Entity Name: scholarship <br />
 Synonyms: Grant, Award, Fellowship<br />
