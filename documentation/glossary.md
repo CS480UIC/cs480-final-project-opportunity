@@ -61,7 +61,7 @@ login_user-Attends-tutoring_service (*Maximum Cardinality*)<br />
 many-many: many users can use many different tutoring services<br />
 <br />
 tutoring_service-Hires_tutor (*Maximum Cardinality*)<br />
-many-many: many tutoring service can hire many different tutors<br />
+1-many: Each tutoring service can hire many different tutors<br />
 <br />
 login_user-Applies To-scholarship (*Maximum Cardinality*) <br />
 many-many: many users can apply to many scholarships<br />
@@ -70,7 +70,7 @@ login_user-Applies To-jobs (*Maximum Cardinality*) <br />
 many-many: many users can apply to many jobbs<br />
 <br />
 company-Offers-job_opportunity (*Maximum Cardinality*) <br />
-many-many: many companies can offer many opportunities<br />
+1-many: Each company can offer many opportunities<br />
 ## Attributes
 1. scholarship
    - **id**(primary key)
