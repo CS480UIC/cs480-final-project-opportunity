@@ -47,13 +47,30 @@ Entity Name: login_user <br />
 Synonyms: Login credential<br />
 Description: A account infomation for user including username and password<br />
 
-
-
-
-
-
-
-
+## Relationship
+login_user-Uses-academic_resource<br />
+many-many: many users can use different resources<br />
+<br />
+login_user-Uses-legal_resource<br />
+many-many: many users can use different resources<br />
+<br />
+login_user-Uses-health_resource<br />
+many-many: many users can use different resources<br />
+<br />
+login_user-Attends-tutoring_service<br />
+many-many: many users can use many different tutoring services<br />
+<br />
+tutoring_service-Hires_tutor<br />
+many-many: many tutoring service can hire many different tutors<br />
+<br />
+login_user-Applies To-scholarship<br />
+many-many: many users can apply to many scholarships<br />
+<br />
+login_user-Applies To-company<br />
+many-many: many users can apply to many companies<br />
+<br />
+company-Offers-job_opportunity<br />
+many-many: many companies can offer many opportunities<br />
 
 
 
