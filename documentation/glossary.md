@@ -52,22 +52,22 @@ Synonyms: Login credential<br />
 Description: A account infomation for user including username and password<br />
 
 ## Relationships
-login_user-Uses-academic_resource (*Maximum Cardinality*)<br />
+login_user-Learns From-academic_resource (*Maximum Cardinality*)<br />
 many-many: many users can use different resources<br />
 <br />
-login_user-Uses-legal_resource (*Maximum Cardinality*)<br />
+login_user-Utilizes-legal_resource (*Maximum Cardinality*)<br />
 many-many: many users can use different resources<br />
 <br />
-login_user-Uses-health_resource (*Maximum Cardinality*)<br />
+login_user-Benefits From-health_resource (*Maximum Cardinality*)<br />
 many-many: many users can use different resources<br />
 <br />
 login_user-Attends-tutoring_service (*Maximum Cardinality*)<br />
 many-many: many users can use many different tutoring services<br />
 <br />
-tutoring_service-Hires_tutor (*Maximum Cardinality*)<br />
+tutoring_service-Hires-tutor (*Maximum Cardinality*)<br />
 1-many: Each tutoring service can hire many different tutors<br />
 <br />
-login_user-Applies To-scholarship (*Maximum Cardinality*) <br />
+login_user-Qualifies For-scholarship (*Maximum Cardinality*) <br />
 many-many: many users can apply to many scholarships<br />
 <br />
 login_user-Applies To-jobs (*Maximum Cardinality*) <br />
@@ -77,61 +77,73 @@ company-Offers-job_opportunity (*Maximum Cardinality*) <br />
 1-many: Each company can offer many opportunities<br />
 ## Attributes
 1. scholarship
-   - **id**(primary key)
-   - name
-   - description 
-   - requirement 
-   - award_amount
-   - deadline
+   - **scholarship_id**(primary key)(UNIQUE, NOT NULL, INTEGER)
+   - award_name(NOT NULL,VARCHAR(100))
+   - description(NOT NULL, VARCHAR(500)) 
+   - requirement(NOT NULL, VARCHAR(300)) 
+   - reward_amount(NOT NULL, DECIMAL(8,2))
+   - deadline(NOT NULL, DATETIME)
 2. job_opportunity
-   - **job_id**
-   - job_descripiton
-   - application
-   - benefit_desciption
-   - salary
-   - position_title
+   - **job_id**(UNIQUE, NOT NULL, INTEGER)
+   - job_descripiton(NOT NULL, VARCHAR(500))
+   - application_info(NOT NULL, VARCHAR(100))
+   - benefit_desciption(NOT NULL, VARCHAR(300))
+   - company_id (foreign key)(NOT NULL, INTEGER)
+   - salary(NOT NULL, DECIMAL(8,2))
+   - position_title(NOT NULL, VARCHAR(100))
 3. tutoring_service
-   - **service_id**
-   - location
-   - total_tutors
-   - operation_hours
-   - name
-   - contact_info
+   - **service_id**(UNIQUE, NOT NULL, INTEGER)
+   - address(NOT NULL, VARCHAR(100))
+   - total_tutors(NOT NULL, INTEGER)
+   - operation_hours(NOT NULL, VARCHAR(100))
+   - service_name(NOT NULL, VARCHAR(300))
+   - contact_info(NOT NULL, VARCHAR(300))
 4. tutor
-   - **fullname**
-   - grade_level
-   - cost
-   - subject 
-   - contact<br />
+   - **tutor_id**(UNIQUE, NOT NULL, INTEGER)
+   - fullname(NOT NULL, VARCHAR(100))
+   - grade_level(NOT NULL, INTEGER)
+   - fee(NOT NULL, DECIMAL(8,2))
+   - subject(VARCHAR(100)) 
+   - tutor_hours(NOT NULL, VARCHAR(100))
+   - service_id (foreign key)(NOT NULL, INTEGER)
+   - phone_number(NOT NULL, VARCHAR(100))<br />
 5. company
-   - **company_id**
-   - address
-   - review
-   - name
-   - industry<br />
+   - **company_id**(UNIQUE, NOT NULL, INT)
+   - comp_address(NOT NULL, VARCHAR(200))
+   - review(VARCHAR(500))
+   - name(NOT NULL, VARCHAR(300))
+   - industry(NOT NULL, VARCHAR(100))<br />
 6. academic_resource
-   - **id**
-   - description 
-   - name
-   - subject
-   - payment_method<br />
+   - **academic_id**(UNIQUE, NOT NULL, INTEGER)
+   - academic_description (NOT NULL, VARCHAR(400))
+   - title(NOT NULL, VARCHAR(100))
+   - acad_subject(VARCHAR(200))
+   - acad_location(NOT NULL, VARCHAR(100))
+   - payment_cost(NOT NULL,DECIMAL(8,2))<br />
 7. legal_resource
-   - **rsource_id**
-   - location
-   - name
-   - contact_info
-   - cost
-   - description <br />
+   - **legal_id**(UNIQUE, NOT NUL, INTEGER)
+   - resource_location(NOT NULL, VARCHAR(200))
+   - resource_name(NOT NULL, VARCHAR(100))
+   - contact_information(NOT NULL, VARCHAR(80))
+   - cost(NOT NULL, DECIMAL(8,2))
+   - legal_description(NOT NULL, VARCHAR(500))<br />
 8. health_resource
-   - **id**
-   - contact
-   - health_type
-   - location
-   - service_description
-   - payment<br />
+   - **health_id**(UNIQUE, NOT NULL, INTEGER)
+   - contact(NOT NULL, VARCHAR(100))
+   - health_type(NOT NULL, VARCHAR(50))
+   - location(NOT NULL, VARCHAR(100))
+   - service_description(NOT NULL, VARCHAR(500))
+   - payment(NOT NULL, DECIMAL(8,2))<br />
 9. login_user
-   - **user_id**
-   - username
-   - password 
-   - date_time
+   - **user_id**(UNIQUE, NOT NULL, INTEGER)
+   - username(UNIQUE, NOT NULL, VARCHAR(50))
+   - password(NOT NULL, VARCHAR(50)) 
+   - date_time(NOT NULL, DATETIME)
 
+## Dependent entities:
+- job_opportunity depends on company (Relationship: company-Offers-job_opportunity)
+- tutor depends on tutoring_service  (Relationship: tutoring_service-Hires-tutor)
+
+## Cascade and Restrict Constraints:
+- Cascade when company_id and service_id are inserted or deleted
+- Restrict when job_id and tutor_id are updated
