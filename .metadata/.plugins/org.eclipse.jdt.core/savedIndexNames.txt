@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\summo\Documents\480 Stuff\CS480_Demo\CS480Template\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\summo\Documents\480 Stuff\CS480_Demo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\813072301.index
-\CS480Template\src\main\java
-C:\Users\summo\Documents\480 Stuff\CS480_Demo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1833880770.index
-\CS480Template\src\main\java
-C:\Users\summo\Documents\480 Stuff\CS480_Demo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2747733374.index
-\CS480Template\src\main\java
