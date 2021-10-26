@@ -1,0 +1,15 @@
+127.0.0.1 - - [13/Oct/2021:15:50:09 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:50:10 -0500] "GET /CS480Template/jsps/main.jsp HTTP/1.1" 200 1347
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:50:10 -0500] "GET /CS480Template/jsps/body.jsp;jsessionid=3FF348E37522FC8953E6A1426C11F3B2 HTTP/1.1" 200 1414
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:50:10 -0500] "GET /CS480Template/jsps/top.jsp;jsessionid=3FF348E37522FC8953E6A1426C11F3B2 HTTP/1.1" 200 1055
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:56:14 -0500] "GET /CS480Template/jsps/main.jsp HTTP/1.1" 200 1347
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:56:14 -0500] "GET /CS480Template/jsps/top.jsp;jsessionid=34E8DFDF7D3B8FEF48EB20390768B9EB HTTP/1.1" 200 1055
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:56:14 -0500] "GET /CS480Template/jsps/body.jsp;jsessionid=34E8DFDF7D3B8FEF48EB20390768B9EB HTTP/1.1" 200 1414
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:17 -0500] "GET /CS480Template/jsps/user/regist.jsp HTTP/1.1" 200 1195
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:43 -0500] "POST /CS480Template/UserServletRegister HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:43 -0500] "GET /CS480Template/jsps/user/login.jsp HTTP/1.1" 200 943
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:49 -0500] "POST /CS480Template/UserServletLogin HTTP/1.1" 200 1259
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:49 -0500] "GET /CS480Template/jsps/body.jsp HTTP/1.1" 200 1414
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:49 -0500] "GET /CS480Template/jsps/top.jsp HTTP/1.1" 200 1179
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:53 -0500] "GET /CS480Template/jsps/user/queries.jsp HTTP/1.1" 200 773
+0:0:0:0:0:0:0:1 - - [13/Oct/2021:15:57:57 -0500] "GET /CS480Template/findAll HTTP/1.1" 200 542

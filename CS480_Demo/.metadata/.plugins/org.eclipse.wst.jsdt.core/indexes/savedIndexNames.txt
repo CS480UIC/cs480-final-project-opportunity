@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\summo\Documents\480 Stuff\CS480_Demo\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2708009837.index
+1723763458.index
+3478788484.index
+1366675154.index
+3310635232.index
+1770936860.index
