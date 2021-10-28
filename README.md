@@ -33,5 +33,5 @@ Our database will contain a table containing information about jobs that are ava
 
 ### Company CRUD 
 
-![Company Read](documentation/screenshot/company/read_company)
+![Company Read](https://github.com/CS480UIC/cs480-final-project-opportunity/tree/main/documentation/screenshots/company/read_company)
 
