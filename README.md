@@ -35,3 +35,8 @@ Our database will contain a table containing information about jobs that are ava
 
 ![Company Read](https://github.com/CS480UIC/cs480-final-project-opportunity/tree/main/documentation/screenshots/company/read_company)
 
+### Login User CRUD
+
+![CreateLoginUser](https://user-images.githubusercontent.com/60859999/139346098-0e48743d-700f-4859-b8d0-d6ab24668deb.jpg)
+
+
