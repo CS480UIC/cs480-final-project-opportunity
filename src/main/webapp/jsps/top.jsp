@@ -49,6 +49,11 @@
 			<a href="<c:url value='/jsps/tutor/tutor_menu.jsp'/>" target="body">CRUD Tutor</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/company/company_menu.jsp'/>" target="body">CRUD Company</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/job_opportunity/job_opportunity_menu.jsp'/>" target="body">CRUD Job Opportunity</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/health_resources/health_resources_menu.jsp'/>" target="body">CRUD Health Resources</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/scholarship/scholarship_menu.jsp'/>" target="body">CRUD Scholarship</a> |&nbsp;&nbsp;
+			
+			
+			
 		</c:otherwise>
 	</c:choose>
 
