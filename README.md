@@ -9,12 +9,11 @@
 
 1. [Team Members](#team-members)
 2. [Project Description](#project-description)
+3. [CRUD Screenshots](#crud-screenshots-for-entities)
 
 
 
 ----
-
-
 
 ## Team members:
 - Rohith Poovakkattil Rajan
@@ -27,3 +26,12 @@
 ## Project Description:
 
 Our database will contain a table containing information about jobs that are available to international and underrepresented students including job descriptions, how to apply, company, whether or not they will sponsor international students, and location. The database will also contain a table regarding scholarships for these types of students and information about requirements and how to apply as well as a table describing different academic and tutoring resources available for these students. Many school systems could use this database to provide more resources to current and prospective students in a concise and well organized manner. There are currently no known databases that compile all of this information together for international and underrepresented students
+
+---
+
+## CRUD Screenshots for Entities 
+
+### Company CRUD 
+
+![Company Read](documentation/screenshot/company/read_company)
+
