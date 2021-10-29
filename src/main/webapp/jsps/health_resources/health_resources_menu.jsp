@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Health Resources </h1>
     <br>
-	<a href="<c:url value='/jsps/company/company_create.jsp'/>" target="_parent">Create Health Resources </a> |&nbsp; 
-	<a href="<c:url value='/jsps/company/company_read.jsp'/>" target="_parent">Read Health Resources</a> |&nbsp;
-	<a href="<c:url value='/jsps/company/company_update.jsp'/>" target="_parent">Update Health Resources</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/company/company_delete.jsp'/>" target="_parent">Delete Health Resources</a>	
+	<a href="<c:url value='/jsps/health_resources/health_resources_create.jsp'/>" target="_parent">Create Health Resources </a> |&nbsp; 
+	<a href="<c:url value='/jsps/health_resources/health_resources_read.jsp'/>" target="_parent">Read Health Resources</a> |&nbsp;
+	<a href="<c:url value='/jsps/health_resources/health_resources_update.jsp'/>" target="_parent">Update Health Resources</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/health_resources/health_resources_delete.jsp'/>" target="_parent">Delete Health Resources</a>	
 	    
   </body>
 </html>

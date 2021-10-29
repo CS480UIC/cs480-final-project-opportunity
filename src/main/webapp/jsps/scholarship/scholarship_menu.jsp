@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for Scholarship </h1>
     <br>
-	<a href="<c:url value='/jsps/company/company_create.jsp'/>" target="_parent">Create Scholarship </a> |&nbsp; 
-	<a href="<c:url value='/jsps/company/company_read.jsp'/>" target="_parent">Read Scholarship</a> |&nbsp;
-	<a href="<c:url value='/jsps/company/company_update.jsp'/>" target="_parent">Update Scholarship</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/company/company_delete.jsp'/>" target="_parent">Delete Scholarship</a>	
+	<a href="<c:url value='/jsps/scholarship/scholarship_create.jsp'/>" target="_parent">Create Scholarship </a> |&nbsp; 
+	<a href="<c:url value='/jsps/scholarship/scholarship_read.jsp'/>" target="_parent">Read Scholarship</a> |&nbsp;
+	<a href="<c:url value='/jsps/scholarship/scholarship_update.jsp'/>" target="_parent">Update Scholarship</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/scholarship/scholarship_delete.jsp'/>" target="_parent">Delete Scholarship</a>	
 	    
   </body>
 </html>
