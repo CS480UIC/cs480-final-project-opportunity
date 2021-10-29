@@ -96,18 +96,18 @@ Our database will contain a table containing information about jobs that are ava
 --- 
 ### Academic Resources CRUD
 
-![Create Academic Resources](/documentation/screenshots/academic_resource/Screen Shot 2021-10-28 at 6.37.35 PM.png "Create Academic Resources")
-![Read Academic Resources](/documentation/screenshots/academic_resource/Screen Shot 2021-10-28 at 6.37.01 PM.png "Read Academic Resources")
-![Update Academic Resources](/documentation/screenshots/academic_resource/Screen Shot 2021-10-28 at 6.37.04 PM.png "Update Academic Resources")
-![Delete Academic Resources](/documentation/screenshots/academic_resource/Screen Shot 2021-10-28 at 6.37.07 PM.png "Delete Academic Resources")
+![Create Academic Resources](/documentation/screenshots/academic_resource/create_academic.png "Create Academic Resources")
+![Read Academic Resources](/documentation/screenshots/academic_resource/read_academic.png "Read Academic Resources")
+![Update Academic Resources](/documentation/screenshots/academic_resource/update_academic.png "Update Academic Resources")
+![Delete Academic Resources](/documentation/screenshots/academic_resource/delete_academic.png "Delete Academic Resources")
 
 --- 
 ### Legal Resources CRUD
 
-![Create Legal Resources](/documentation/screenshots/legal_resource/Screen Shot 2021-10-28 at 6.37.35 PM.png "Create Legal Resources")
-![Read Legal Resources](/documentation/screenshots/legal_resource/Screen Shot 2021-10-28 at 6.37.38 PM.png "Read Legal Resources")
-![Update Legal Resources](/documentation/screenshots/legal_resource/Screen Shot 2021-10-28 at 6.37.41 PM.png "Update Legal Resources")
-![Delete Legal Resources](/documentation/screenshots/legal_resource/Screen Shot 2021-10-28 at 6.37.47 PM.png "Delete Legal Resources")
+![Create Legal Resources](/documentation/screenshots/legal_resource/create_legal.png "Create Legal Resources")
+![Read Legal Resources](/documentation/screenshots/legal_resource/read_legal.png "Read Legal Resources")
+![Update Legal Resources](/documentation/screenshots/legal_resource/update_legal.png "Update Legal Resources")
+![Delete Legal Resources](/documentation/screenshots/legal_resource/delete_legal.png "Delete Legal Resources")
 
 --- 
 
