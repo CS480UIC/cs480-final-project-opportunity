@@ -1,0 +1,6 @@
+Timestamp,company_id,name,industry,comp_address,review
+10/19/2021 15:37:18,1,UIC Company,education,1234 Internet St.,5 stars!
+11/5/2021 16:01:54,2,Deloitte,Management Consulting,"St Michael, MN",Great Company to work for!
+11/5/2021 19:01:25,3,Nike,Sports/Clothing,"Beaverton, OR",4.5 stars
+11/5/2021 19:03:20,4,Amazon,"Computer Software, Information Technology and Services","Arlington, VA",3 stars
+11/5/2021 19:07:28,5,Roku,Entertainment,"New York, NY",3.5 stars

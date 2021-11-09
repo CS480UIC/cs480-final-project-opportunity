@@ -1,0 +1,6 @@
+Timestamp,service_id,service_name,address,operation_hours,contact_info,total_tutors
+10/18/2021 15:24,1,Tutors R Us,"1234 Internet Street, Chicago, IL 12345","Mon-Fri: 9:00am-5:00pm, Sat-Sun:10:00am-2:00pm",123-456-78910,10
+11/5/2021 15:07,2,MyGuru,"600 N Kingsbury St Chicago, IL 60654",Mon - Sun  8:00 AM - 11:00 PM,(312) 278-0321,25
+11/5/2021 15:08,3,Kumon Math and Reading Center of Chicago - South Loop,"2117 B South China Pl Ste B Chicago, IL 60616","Mon: 3:00-6:00, Thur: 3:00-6:00, Sat: 9:30-12:00",(312) 791-1440,33
+11/5/2021 15:10,4,Huntington Learning Center,"1505 W Fullerton Ave Chicago, IL 60614","Mon - Fri: 9:00-7:00, Sat: 9:00-3:00",(773) 348-4444,7
+11/5/2021 15:11,5,Mathnasium,"1444 W Fullerton Ave Chicago, IL 60614","Mon - Thurs: 3:00 - 7:00, Sat: 10:00 - 2:00, Sun: 12:00 - 3:00 ",(773) 880-6284,12
