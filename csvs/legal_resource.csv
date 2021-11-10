@@ -1,6 +1,6 @@
-Timestamp,Email Address,legal_id,cost,legal_description,resource_location,resource_name,contact_info
-10/19/2021 16:31:04,cwen7@uic.edu,300000,200,Lawyer consultation for visa,"100 W 100th St, Chicago, IL",lawyer_consultation,6301234567
-10/19/2021 16:32:57,cwen7@uic.edu,5614,500,Get help with your H1-B visa sponsorship,"Chicago, IL",H1-B Visa,+1 3125642311
-11/8/2021 9:42:07,cwen7@uic.edu,000002,50,Consultation for interview ,"Chicago, IL",Legal consultation  ,3120001111
-11/8/2021 9:45:07,cwen7@uic.edu,000005,100,Consultation regarding to Visa status,"Chicago, IL",Visa consultation,3121110022
-11/8/2021 9:51:13,cwen7@uic.edu,12345,1,Office of International Students that can help answer questions. ,On campus ,OIS office,3129901234
+Timestamp,Email Address,legal_id,user_id,cost,legal_description,resource_location,resource_name,contact_info
+10/19/2021 16:31,cwen7@uic.edu,300000,1,200,Lawyer consultation for visa,"100 W 100th St, Chicago, IL",lawyer_consultation,6301234567
+10/19/2021 16:32,cwen7@uic.edu,5614,3,500,Get help with your H1-B visa sponsorship,"Chicago, IL",H1-B Visa,+1 3125642311
+11/8/2021 9:42,cwen7@uic.edu,2,4,50,Consultation for interview ,"Chicago, IL",Legal consultation  ,3120001111
+11/8/2021 9:45,cwen7@uic.edu,5,2,100,Consultation regarding to Visa status,"Chicago, IL",Visa consultation,3121110022
+11/8/2021 9:51,cwen7@uic.edu,12345,5,1,Office of International Students that can help answer questions. ,On campus ,OIS office,3129901234

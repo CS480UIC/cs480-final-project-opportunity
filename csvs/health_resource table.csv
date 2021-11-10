@@ -1,6 +1,6 @@
-Timestamp,health_id,contact,health_type,location,service_description,payment
-10/19/2021 15:47:45,1,123--456-78910,Mental Health,"1234 Real St,Chicago, IL 12345",Provide therapy sessions for students,free
-11/5/2021 15:28:55,2, (312) 949-1289,Medical Health,"1845 S Michigan Ave, Chicago, IL 60616","Chicago InHealth Center is a multidisciplinary clinic offering chiropractic care, functional gait analysis, physical therapy, active release therapy, and acupuncture.","Consultation: Free, Other Service Fees may vary"
-11/5/2021 15:31:12,3,773-768-5000,Medical,"9119 S Exchange Ave, Chicago, IL 60617",Chicago Family Health Center provides comprehensive primary healthcare for all who seek care.,Service Fees may vary
-11/5/2021 15:32:56,4,312-747-7496,Mental Health,641 W. 63rd Street,"Care that can provide supports for emotional, traumatic, or behavioral difficulties. ",Service fees may vary
-11/5/2021 15:35:15,5, (773) 907-8255,Medical,"5106 N Lincoln Ave, Chicago, IL 60625",Lincoln Medical Center is a private medical practice located in the prominent neighborhood of Lincoln Square. ,Service Fees may vary
+Timestamp,health_id,user_id,contact,health_type,location,service_description,payment
+10/19/2021 15:47,1,1,123--456-78910,Mental Health,"1234 Real St,Chicago, IL 12345",Provide therapy sessions for students,free
+11/5/2021 15:28,2,2, (312) 949-1289,Medical Health,"1845 S Michigan Ave, Chicago, IL 60616","Chicago InHealth Center is a multidisciplinary clinic offering chiropractic care, functional gait analysis, physical therapy, active release therapy, and acupuncture.","Consultation: Free, Other Service Fees may vary"
+11/5/2021 15:31,3,3,773-768-5000,Medical,"9119 S Exchange Ave, Chicago, IL 60617",Chicago Family Health Center provides comprehensive primary healthcare for all who seek care.,Service Fees may vary
+11/5/2021 15:32,4,4,312-747-7496,Mental Health,641 W. 63rd Street,"Care that can provide supports for emotional, traumatic, or behavioral difficulties. ",Service fees may vary
+11/5/2021 15:35,5,5, (773) 907-8255,Medical,"5106 N Lincoln Ave, Chicago, IL 60625",Lincoln Medical Center is a private medical practice located in the prominent neighborhood of Lincoln Square. ,Service Fees may vary

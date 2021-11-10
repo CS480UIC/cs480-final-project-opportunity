@@ -1,6 +1,6 @@
-Timestamp,Email Address,academic_id,title,payment_cost,resource_location,acad_subject,academic_description
-10/19/2021 16:09:42,cwen7@uic.edu,100000,design_pattern,0,Library,computer_science,This book is about design pattern. 
-10/19/2021 16:11:21,cwen7@uic.edu,100001,journal,4,Library,medical,This is a medical journal. 
-11/8/2021 9:29:10,cwen7@uic.edu,4,Writing Center,0,On campus,English ,Students can use this resource on campus to check their papers.  
-11/8/2021 9:31:15,cwen7@uic.edu,5,CS TA Office hours online,0,Zoom/blackboard ,Computer Science,TA office hours for computer science. 
-11/8/2021 9:32:56,cwen7@uic.edu,6,Library,0,On campus library,Any,Students can use the resources in the library for studying. 
+Timestamp,Email Address,academic_id,user_id,title,payment_cost,resource_location,acad_subject,academic_description
+10/19/2021 16:09,cwen7@uic.edu,100000,3,design_pattern,0,Library,computer_science,This book is about design pattern. 
+10/19/2021 16:11,cwen7@uic.edu,100001,4,journal,4,Library,medical,This is a medical journal. 
+11/8/2021 9:29,cwen7@uic.edu,4,2,Writing Center,0,On campus,English ,Students can use this resource on campus to check their papers.  
+11/8/2021 9:31,cwen7@uic.edu,5,1,CS TA Office hours online,0,Zoom/blackboard ,Computer Science,TA office hours for computer science. 
+11/8/2021 9:32,cwen7@uic.edu,6,5,Library,0,On campus library,Any,Students can use the resources in the library for studying. 
