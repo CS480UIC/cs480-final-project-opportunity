@@ -36,7 +36,7 @@ public class UserDao {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 		    String sql = "select * from user where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
@@ -46,8 +46,7 @@ public class UserDao {
 		    	if(user_name.equals(username)){
 		    		user.setUsername(resultSet.getString("username"));
 		    		user.setPassword(resultSet.getString("password"));
-		    		user.setEmail(resultSet.getString("email"));
-		    		
+		    		user.setDateTime(resultSet.getString("date_time"));
 		    	}
 		    }
 		
@@ -67,13 +66,14 @@ public class UserDao {
 	public void add(User user) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
-			String sql = "insert into user values(?,?,?)";
-			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,user.getUsername());
-		    preparestatement.setString(2,user.getPassword());
-		    preparestatement.setString(3,user.getEmail());
+			String sql = "insert into user values(?,?,?,?)";
+			PreparedStatement preparestatement = connect.prepareStatement(sql);
+			preparestatement.setInt(1,user.getUserId());
+		    preparestatement.setString(2,user.getUsername());
+		    preparestatement.setString(3,user.getPassword());
+		    preparestatement.setString(4,user.getDateTime());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -86,15 +86,16 @@ public class UserDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			String sql = "select * from user";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
 			while(resultSet.next()){
 				User user = new User();
+				user.setUserId(resultSet.getInt("user_id"));
 				user.setUsername(resultSet.getString("username"));
 	    		user.setPassword(resultSet.getString("password"));
-	    		user.setEmail(resultSet.getString("email"));
+	    		user.setDateTime(resultSet.getString("date_time"));
 	    		list.add(user);
 			 }
 			connect.close();

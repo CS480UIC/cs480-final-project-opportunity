@@ -1,10 +1,10 @@
-package user.domain;
+package init.domain;
 
 /**
  * User object
  * @author Aayush Makharia
  */
-public class User {
+public class Init {
 	/*
 	 * Correspond to the user table
 	 */

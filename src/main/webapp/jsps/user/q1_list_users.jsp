@@ -11,13 +11,15 @@
 	<h3 align="center"> User Table </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
+		<th>id</th>
 		<th>name</th>
-		<th>email</th>
+		<th>date_time</th>
 	</tr>
 <c:forEach items="${UserList}" var="user">
 	<tr>
+		<td>${user.userId}</td>
 		<td>${user.username}</td>
-		<td>${user.email}</td>
+		<td>${user.dateTime}</td>
 	</tr>
 </c:forEach>
 </table>
