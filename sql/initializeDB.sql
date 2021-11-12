@@ -1,3 +1,6 @@
+CREATE DATABASE opportunity;
+USE opportunity;
+
 DROP TABLE IF EXISTS `academic_resource`;
 DROP TABLE IF EXISTS `job_opportunity`;
 DROP TABLE IF EXISTS `company`;
