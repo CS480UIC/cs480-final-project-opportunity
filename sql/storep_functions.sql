@@ -81,4 +81,28 @@ RETURN numScholarships;
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` FUNCTION `tutorServiceWithMaxTutors`() RETURNS varchar(300) CHARSET utf8mb4
+    READS SQL DATA
+BEGIN
+
+DECLARE service varchar(300);
+
+DECLARE maxTutors INT;
+
+SELECT MAX(total_tutors) 
+INTO maxTutors
+FROM tutoring_service;
+
+
+
+SELECT ts.service_name 
+INTO service
+FROM tutoring_service as ts
+WHERE ts.total_tutors = maxTutors;
+
+
+RETURN service;
+END$$
+DELIMITER ;
 
