@@ -19,6 +19,11 @@ FROM user
 WHERE username LIKE '%7%'
 ORDER BY date_time;
 
+SELECT location, service_description
+FROM health_resource as h
+GROUP BY h.location 
+HAVING CAST(h.payment AS INT) < 1000 AND health_type = 'ABC';
+
 # Aggregate Queries
 SELECT user_id, award_name, `description`, MAX(reward_amount), deadline
 FROM scholarship
@@ -37,6 +42,11 @@ GROUP BY legal_id, user_id, cost, legal_description, resource_location, resource
 SELECT date_time, COUNT(*) AS NumUsers
 FROM user
 GROUP BY MINUTE(date_time);
+
+SELECT position_title, COUNT(*) AS totalOpeningsInCompany
+FROM job_opportunity
+GROUP BY company_id
+HAVING salary > 80000;
 
 # Complex Queries
 SELECT position_title, job_description, salary, `name`, industry, review
