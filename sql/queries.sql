@@ -29,7 +29,8 @@ SELECT subject, COUNT(*) AS totalTutors
 FROM tutor
 GROUP BY subject;
 
-SELECT legal_id, user_id, cost, legal_description, resource_location, resource_name, COUNT(*) resource_count
+SELECT legal_id, user_id, cost, legal_description, resource_location, resource_name, 
+concat(resource_name, " ", legal_description) as NameDescription
 FROM legal_resource
 GROUP BY legal_id, user_id, cost, legal_description, resource_location, resource_name;
 
