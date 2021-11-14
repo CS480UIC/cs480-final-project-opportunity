@@ -34,6 +34,17 @@ BEGIN
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `seeCompanyReviews`()
+
+BEGIN
+    SELECT company_id, `name` AS companyName, review
+    FROM company
+    GROUP BY company_id;
+    
+END$$
+DELIMITER ;
+
 
 # Functions
 DELIMITER $$

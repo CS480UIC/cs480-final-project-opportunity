@@ -62,6 +62,12 @@ FROM user AS U
 INNER JOIN legal_resource AS LR
 ON U.user_id = LR.user_id;
 
+SELECT jo.position_title, jo.job_description 
+FROM job_opportunity as jo
+INNER JOIN company as c
+ON jo.company_id = c.company_id
+WHERE c.industry = 'Technology';
+
 SELECT username
 FROM user
 WHERE EXISTS
