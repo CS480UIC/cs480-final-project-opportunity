@@ -7,6 +7,20 @@ BEGIN
 END$$
 DELIMITER ;
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `biggest_scholarships`()
+BEGIN
+SELECT scholarship_id, award_name, requirement, reward_amount
+FROM scholarship
+WHERE reward_amount > (SELECT AVG(reward_amount) FROM scholarship);
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `user_progress`(In username varchar(20), OUT quantity int)
+SELECT COUNT(*)
+    INTO quantity
+    FROM scholarship as s, user as u
+    WHERE u.user_id = s.user_id;
+END
+
 # Functions
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` FUNCTION `CalculateTutorCost`(id INT, hours DECIMAL(8,2)) RETURNS decimal(8,2)
@@ -22,3 +36,17 @@ BEGIN
 RETURN total_cost;
 END$$
 DELIMITER ;
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `sum_scholarship`(the_user int) RETURNS int
+    READS SQL DATA
+BEGIN
+	DECLARE scholarship_sum INT;
+	
+	SELECT reward_amount
+	INTO scholarship_sum
+	FROM scholarship
+	WHERE the_user = user_id;
+
+RETURN scholarship_sum;
+END
+
