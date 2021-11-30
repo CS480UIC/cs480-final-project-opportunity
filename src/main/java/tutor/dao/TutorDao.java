@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import tutor.domain.Tutor;
+import tutor.domain.TutorServices;
+import tutor.domain.TotalTutor;
 
 /**
  * DDL functions performed in database
@@ -138,5 +139,82 @@ public class TutorDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findAllTutors() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "SELECT * \n"
+						 + "FROM tutor \n"
+						 + "WHERE grade_level > 9 AND fee < 30\n"
+						 + "ORDER BY grade_level DESC;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Tutor tutor = new Tutor();
+				tutor.setTutor_id(resultSet.getInt("tutor_id"));
+				tutor.setFull_name(resultSet.getString("fullname"));
+	    		tutor.setGrade_level(resultSet.getInt("grade_level"));
+	    		tutor.setSubject(resultSet.getString("subject"));
+	    		tutor.setFee(resultSet.getDouble("fee"));
+	    		tutor.setService_id(resultSet.getInt("service_id"));
+	    		tutor.setPhone_number(resultSet.getString("phone_number"));
+	    		tutor.setTutor_hours(resultSet.getString("tutor_hours"));
+	    		list.add(tutor);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+	
+	public List<Object> findTutorService() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "SELECT fullname, `subject`, fee, (SELECT service_name FROM tutoring_service ts WHERE ts.service_id = t.service_id) AS service_name \n"
+						 + "FROM tutor t;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				TutorServices tutorService = new TutorServices();
+				tutorService.setFull_name(resultSet.getString("fullname"));
+	    		tutorService.setSubject(resultSet.getString("subject"));
+	    		tutorService.setFee(resultSet.getDouble("fee"));
+	    		tutorService.setService_name(resultSet.getString("service_name"));
+	    		list.add(tutorService);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+	}
+	
+	public List<Object> findNumTutors() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "SELECT subject, COUNT(*) AS totalTutors \n"
+						 + "FROM tutor \n"
+						 + "GROUP BY subject;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				TotalTutor tutor = new TotalTutor();
+	    		tutor.setSubject(resultSet.getString("subject"));
+	    		tutor.setTotalTutors(resultSet.getInt("totalTutors"));
+	    		list.add(tutor);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

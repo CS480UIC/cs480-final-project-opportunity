@@ -181,6 +181,42 @@
     <servlet-name>UserServletLogout</servlet-name>
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>findTutor</display-name>
+    <servlet-name>findTutor</servlet-name>
+    
+    <servlet-class>tutor.web.servlet.findTutor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTutor</servlet-name>
+    <url-pattern>/findTutor</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>findTutorService</display-name>
+    <servlet-name>findTutorService</servlet-name>
+    
+    <servlet-class>tutor.web.servlet.findTutorService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTutorService</servlet-name>
+    <url-pattern>/findTutorService</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>findTotalTutors</display-name>
+    <servlet-name>findTotalTutors</servlet-name>
+    
+    <servlet-class>tutor.web.servlet.findTotalTutors</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findTotalTutors</servlet-name>
+    <url-pattern>/findTotalTutors</url-pattern>
+  </servlet-mapping>
   
   
   <servlet>

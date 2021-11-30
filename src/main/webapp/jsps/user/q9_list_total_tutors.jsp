@@ -17,7 +17,7 @@
 <c:forEach items="${TutorList}" var="tutor">
 	<tr>
 		<td>${tutor.subject}</td>
-		<td>${tutor.total_tutors}</td>
+		<td>${tutor.totalTutors}</td>
 	</tr>
 </c:forEach>
 </table>

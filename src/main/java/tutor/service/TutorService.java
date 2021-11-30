@@ -1,6 +1,8 @@
 package tutor.service;
 
 
+import java.util.List;
+
 import tutor.dao.TutorDao;
 import tutor.domain.Tutor;
 
@@ -26,4 +28,15 @@ public class TutorService {
 		tutorDao.add(form);
 	}
 	
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return tutorDao.findAllTutors();
+	}
+	
+	public List<Object> findServices() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return tutorDao.findTutorService();
+	}
+	
+	public List<Object> findTotal() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return tutorDao.findNumTutors();
+	}
 }
