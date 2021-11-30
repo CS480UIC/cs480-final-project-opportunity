@@ -22,25 +22,13 @@
   
   <body>
   <h1>Update Tutoring Service</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/tutoring_serviceServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Service ID   :<input type="text" name="serviceId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Service ID   :<input type="text" name="serviceId" value="${form.serviceId }"/>
+	<span style="color: red; font-weight: 900">${errors.serviceId }</span>
 	<br/>
-	Update Service Name   :<input type="text" name="serviceName" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update Address   :<input type="text" name="address" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update Total Tutors   :<input type="text" name="totalTutors" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update Operation Hours  :<input type="text" name="operationHours" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Update Contact Info   :<input type="text" name="contactInfo" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	User ID   :<input type="text" name="userId" value="${form.userId }"/>
+	<span style="color: red; font-weight: 900">${errors.userId }</span>
 	<br/>
 	<input type="submit" value="Update Tutoring Service"/>
 </form>

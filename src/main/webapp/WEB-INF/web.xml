@@ -73,6 +73,94 @@
 
   <servlet>
     <description></description>
+    <display-name>tutoring_serviceServletCreate</display-name>
+    <servlet-name>tutoring_serviceServletCreate</servlet-name>
+    <servlet-class>tutoring_service.web.servlet.tutoring_serviceServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tutoring_serviceServletCreate</servlet-name>
+    <url-pattern>/tutoring_serviceServletCreate</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>tutoring_serviceServletDelete</display-name>
+    <servlet-name>tutoring_serviceServletDelete</servlet-name>
+    <servlet-class>tutoring_service.web.servlet.tutoring_serviceServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tutoring_serviceServletDelete</servlet-name>
+    <url-pattern>/tutoring_serviceServletDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>tutoring_serviceServletRead</display-name>
+    <servlet-name>tutoring_serviceServletRead</servlet-name>
+    <servlet-class>tutoring_service.web.servlet.tutoring_serviceServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tutoring_serviceServletRead</servlet-name>
+    <url-pattern>/tutoring_serviceServletRead</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>tutoring_serviceServletUpdate</display-name>
+    <servlet-name>tutoring_serviceServletUpdate</servlet-name>
+    <servlet-class>tutoring_service.web.servlet.tutoring_serviceServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tutoring_serviceServletUpdate</servlet-name>
+    <url-pattern>/tutoring_serviceServletUpdate</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>TutorServletCreate</display-name>
+    <servlet-name>TutorServletCreate</servlet-name>
+    <servlet-class>tutor.web.servlet.TutorServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TutorServletCreate</servlet-name>
+    <url-pattern>/TutorServletCreate</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>TutorServletRead</display-name>
+    <servlet-name>TutorServletRead</servlet-name>
+    <servlet-class>tutor.web.servlet.TutorServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TutorServletRead</servlet-name>
+    <url-pattern>/TutorServletRead</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>TutorServletUpdate</display-name>
+    <servlet-name>TutorServletUpdate</servlet-name>
+    <servlet-class>tutor.web.servlet.TutorServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TutorServletUpdate</servlet-name>
+    <url-pattern>/TutorServletUpdate</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <description></description>
+    <display-name>TutorServletDelete</display-name>
+    <servlet-name>TutorServletDelete</servlet-name>
+    <servlet-class>tutor.web.servlet.TutorServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TutorServletDelete</servlet-name>
+    <url-pattern>/TutorServletDelete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
     <display-name>UserServletLogin</display-name>
     <servlet-name>UserServletLogin</servlet-name>
     <servlet-class>user.web.servlet.UserServletLogin</servlet-class>

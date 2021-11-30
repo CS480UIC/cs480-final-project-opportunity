@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Tutor</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,27 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Tutor</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/TutorServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="tutorId" value="${tutor.tutor_id }"/>
+	Full Name   :<input type="text" name="fullName" value="${tutor.full_name }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Grade Level：<input type="text" name="gradeLevel" value="${tutor.grade_level }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Subject	：<input type="text" name="subject" value="${tutor.subject }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	Fee	：<input type="text" name="fee" value="${tutor.fee }" disabled/>
+	<br/>
+	Service ID	：<input type="text" name="serviceId" value="${tutor.service_id }" disabled/>
+	<br/>
+	Phone Number	：<input type="text" name="phoneNumber" value="${tutor.phone_number }" disabled/>
+	<br/>
+	Tutor Hours	：<input type="text" name="tutorHours" value="${tutor.tutor_hours }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Tutor"/>
 </form>
 
 </body>

@@ -22,30 +22,30 @@
   
   <body>
   <h1>Create Tutor</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Tutor ID    :<input type="text" name="tutorId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/TutorServletCreate'/>" method="post">
+	Tutor ID    :<input type="text" name="tutorId" value="${form.tutor_id }"/>
+	<span style="color: red; font-weight: 900">${errors.tutor_id }</span>
 	<br/>
-	Full Name：<input type="text" name="fullname" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Full Name：<input type="text" name="fullname" value="${form.full_name }"/>
+	<span style="color: red; font-weight: 900">${errors.full_name }</span>
 	<br/>
-	Grade Level	：<input type="text" name="gradeLevel" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Grade Level	：<input type="text" name="gradeLevel" value="${form.grade_level }"/>
+	<span style="color: red; font-weight: 900">${errors.grade_level }</span>
 	<br/>
-	Subject	：<input type="text" name="subject" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Subject	：<input type="text" name="subject" value="${form.subject }"/>
+	<span style="color: red; font-weight: 900">${errors.subject }</span>
 	<br/>
-	Fee	：<input type="text" name="fee" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Fee	：<input type="text" name="fee" value="${form.fee }"/>
+	<span style="color: red; font-weight: 900">${errors.fee }</span>
 	<br/>
-	Service ID	：<input type="text" name="serviceId" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Service ID	：<input type="text" name="serviceId" value="${form.service_id }"/>
+	<span style="color: red; font-weight: 900">${errors.service_id }</span>
 	<br/>
-	Phone Number	：<input type="text" name="phoneNumber" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Phone Number	：<input type="text" name="phoneNumber" value="${form.phone_number }"/>
+	<span style="color: red; font-weight: 900">${errors.phone_number }</span>
 	<br/>
-	Tutor Hours	：<input type="text" name="tutorHours" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Tutor Hours	：<input type="text" name="tutorHours" value="${form.tutor_hours }"/>
+	<span style="color: red; font-weight: 900">${errors.tutor_hours }</span>
 	<br/>
 	<input type="submit" value="Create Tutor"/>
 </form>

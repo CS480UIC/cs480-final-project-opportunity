@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Tutor</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,32 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
-	<br/>
-	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
-	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
-	<br/>
-</form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/TutorServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="tutorId" value="${tutor.tutor_id }"/>
+	Full Name   :<input type="text" name="fullname" value="${form.full_name}"/>
+	<span style="color: red; font-weight: 900">${errors.full_name }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Grade Level   :<input type="text" name="gradeLevel" value="${form.grade_level }"/>
+	<span style="color: red; font-weight: 900">${errors.grade_level }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	Subject   :<input type="text" name="subject" value="${form.subject }"/>
+	<span style="color: red; font-weight: 900">${errors.subject}</span>
+	<br/>
+	Fee   :<input type="text" name="fee" value="${form.fee }"/>
+	<span style="color: red; font-weight: 900">${errors.fee }</span>
+	<br/>
+	Service ID   :<input type="text" name="serviceId" value="${form.service_id }"/>
+	<span style="color: red; font-weight: 900">${errors.service_id }</span>
+	<br/>
+	Phone Number   :<input type="text" name="phoneNumber" value="${form.phone_number }"/>
+	<span style="color: red; font-weight: 900">${errors.phone_number }</span>
+	<br/>
+	Tutor Hours   :<input type="text" name="tutorHours" value="${form.tutor_hours }"/>
+	<span style="color: red; font-weight: 900">${errors.tutor_hours }</span>
+	<br/>
+	<input type="submit" value="Update Tutor"/>
 </form>
 
 </body>

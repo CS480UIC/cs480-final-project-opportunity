@@ -23,25 +23,13 @@
   <body>
   <h1>Read Tutoring Service</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/tutoring_serviceServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Service ID    :<input type="text" name="serviceId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Service ID    :<input type="text" name="serviceId" value="${form.serviceId }"/>
+	<span style="color: red; font-weight: 900">${errors.serviceId }</span>
 	<br/>
-	Service Name    :<input type="text" name="serviceName" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Address    :<input type="text" name="address" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Total Tutors    :<input type="text" name="totalTutors" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Operation Hours   :<input type="text" name="operationHours" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Contact Info    :<input type="text" name="contactInfo" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	User ID    :<input type="text" name="userId" value="${form.userId }"/>
+	<span style="color: red; font-weight: 900">${errors.userId }</span>
 	<br/>
 	<input type="submit" value="Read Tutoring Service"/>
 </form>

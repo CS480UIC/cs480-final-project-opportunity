@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Tutor Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,24 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Tutor Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	Tutor ID    :<input type="text" name="tutorId" value="${tutor.tutor_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Full Name：<input type="text" name="fullName" value="${tutor.full_name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Grade Level	：<input type="text" name="gradelevel" value="${tutor.grade_level }" disabled/>
+	<br/>
+	Subject	：<input type="text" name="subject" value="${tutor.subject }" disabled/>
+	<br/>
+	Fee	：<input type="text" name="fee" value="${tutor.fee }" disabled/>
+	<br/>
+	Service ID	：<input type="text" name="serviceId" value="${tutor.service_id }" disabled/>
+	<br/>
+	Phone Number	：<input type="text" name="phoneNumber" value="${tutor.phone_number }" disabled/>
+	<br/>
+	Tutor Hours	：<input type="text" name="tutorHours" value="${tutor.tutor_hours }" disabled/>
 	<br/>
 </form>
 

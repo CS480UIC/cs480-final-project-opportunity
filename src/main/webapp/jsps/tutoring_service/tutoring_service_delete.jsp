@@ -22,10 +22,13 @@
   
   <body>
   <h1>Delete Tutoring Service</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/tutoring_serviceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Service ID  :<input type="text" name="serviceName" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Service ID  :<input type="text" name="service_id" value="${form.serviceId }"/>
+	<span style="color: red; font-weight: 900">${errors.serviceId }</span>
+	<br/>
+	Delete User ID  :<input type="text" name="user_id" value="${form.userId }"/>
+	<span style="color: red; font-weight: 900">${errors.userId }</span>
 	<br/>
 	<input type="submit" value="Delete Tutoring Service"/>
 </form>

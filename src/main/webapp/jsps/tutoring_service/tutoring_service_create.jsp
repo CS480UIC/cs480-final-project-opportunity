@@ -22,24 +22,27 @@
   
   <body>
   <h1>Create Tutoring Service</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Service ID    :<input type="text" name="serviceId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/tutoring_serviceServletCreate'/>" method="post">
+	Service ID    :<input type="text" name="serviceId" value="${form.serviceId }"/>
+	<span style="color: red; font-weight: 900">${errors.serviceId }</span>
 	<br/>
-	Service Name：<input type="text" name="serviceName" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	User ID    :<input type="text" name="userId" value="${form.userId }"/>
+	<span style="color: red; font-weight: 900">${errors.userId }</span>
 	<br/>
-	Address	：<input type="text" name="address" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Service Name：<input type="text" name="serviceName" value="${form.service_name }"/>
+	<span style="color: red; font-weight: 900">${errors.service_name }</span>
 	<br/>
-	Total Tutors	：<input type="text" name="totalTutors" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Address	：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
 	<br/>
-	Operation Hours	：<input type="text" name="operationHours" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Total Tutors	：<input type="text" name="totalTutors" value="${form.total_tutors }"/>
+	<span style="color: red; font-weight: 900">${errors.total_tutors }</span>
 	<br/>
-	Contact Info	：<input type="text" name="contactInfo" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Operation Hours	：<input type="text" name="operationHours" value="${form.operation_hours }"/>
+	<span style="color: red; font-weight: 900">${errors.operation_hours }</span>
+	<br/>
+	Contact Info	：<input type="text" name="contactInfo" value="${form.contact_info }"/>
+	<span style="color: red; font-weight: 900">${errors.contact_info }</span>
 	<br/>
 	<input type="submit" value="Create Tutoring Service"/>
 </form>
