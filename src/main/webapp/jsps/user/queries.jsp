@@ -32,7 +32,7 @@
     <br>
  	<a href="<c:url value='/findTutor'/>" target="body">Please list all the tutors for grade levels higher than 9 and a fee less than $30</a>&nbsp;&nbsp;
  	<br>
- 	<a href="<c:url value='/findAll'/>" target="body">Please list all the jobs and companies</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findJobsAndCo'/>" target="body">Please list all the jobs and companies</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findTutorService'/>" target="body">Please list all the tutors and tutoring services</a>&nbsp;&nbsp;
  	<br>

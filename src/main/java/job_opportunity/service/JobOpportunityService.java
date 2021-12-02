@@ -33,4 +33,9 @@ public class JobOpportunityService {
 		return jobDao.findJobs();
 		
 	}
+	
+	public List<Object> findJobsAndCo() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return jobDao.findJobsAndCo();
+		
+	}
 }

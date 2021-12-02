@@ -8,11 +8,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 //import java.util.ArrayList;
 //import java.util.List;
 
-import job_opportunity.domain.JobOpportunity;
-import user.domain.User;
+import job_opportunity.domain.*;
 
 /**
  * DDL functions performed in database
@@ -165,6 +165,36 @@ public class JobOpportunityDao {
 				job.setPositionTitle(resultSet.getString("position_title"));
 				job.setJobDescription(resultSet.getString("job_description"));
 	    		job.setSalary(Float.parseFloat(resultSet.getString("salary")));
+
+	    		list.add(job);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	public List<Object> findJobsAndCo() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "select * from jobs_and_companies";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				
+				JobCo job = new JobCo();
+				
+				job.setPosition_title(resultSet.getString("position_title"));
+				job.setJob_description(resultSet.getString("job_description"));
+	    		job.setSalary(Float.parseFloat(resultSet.getString("salary")));
+	    		job.setName(resultSet.getString("name"));
+	    		job.setIndustry(resultSet.getString("industry"));
+	    		job.setReview(resultSet.getString("review"));
+	    		
 
 	    		list.add(job);
 			 }

@@ -363,6 +363,18 @@
     <url-pattern>/findJobs</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+	<description></description>
+	<display-name>findJobsAndCo</display-name>
+	<servlet-name>findJobsAndCo</servlet-name>
+	
+  <servlet-class>job_opportunity.web.servlet.findJobsAndCo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findJobsAndCo</servlet-name>
+    <url-pattern>/findJobsAndCo</url-pattern>
+  </servlet-mapping>
+  
   
   
   <welcome-file-list>
