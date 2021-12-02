@@ -26,7 +26,7 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
- 	<a href="<c:url value='/findAll'/>" target="body">Please list all the jobs with insurance benefits and salary larger than $70,000</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findJobs'/>" target="body">Please list all the jobs with insurance benefits and salary larger than $70,000</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findAll'/>" target="body">Please list all the scholarships with reward greater than $3,000 and have a deadline on 11/11/2021</a>&nbsp;&nbsp;
     <br>

@@ -17,8 +17,8 @@
 	</tr>
 <c:forEach items="${JobList}" var="job">
 	<tr>
-		<td>${job.position_title}</td>
-		<td>${job.job_description}</td>
+		<td>${job.positionTitle}</td>
+		<td>${job.jobDescription}</td>
 		<td>${job.salary}</td>
 	</tr>
 </c:forEach>
