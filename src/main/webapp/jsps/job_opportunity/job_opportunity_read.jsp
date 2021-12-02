@@ -23,28 +23,14 @@
   <body>
   <h1>Read Job Opportunity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/JobOpportunityServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Job ID:<input type="text" name="jobId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Job ID:<input type="text" name="jobID" value="${form.jobID}"/>
+	<span style="color: red; font-weight: 900">${errors.jobID }</span>
 	<br/>
-	Company Name:<input type="text" name="companyName" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Position Title ：<input type="text" name="positionTitle" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Salary：<input type="text" name="salary" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Job Description：<input type="text" name="jobDescription" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Benefits Description ：<input type="text" name="benefits" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Application Link ：<input type="text" name="application" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	User ID:<input type="text" name="userID" value="${form.userID}"/>
+	<span style="color: red; font-weight: 900">${errors.userID }</span>
 	<br/>
 	<input type="submit" value="Read Job Opportunity"/>
 </form>

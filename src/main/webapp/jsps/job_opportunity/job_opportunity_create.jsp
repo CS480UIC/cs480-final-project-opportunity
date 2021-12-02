@@ -22,28 +22,31 @@
   
   <body>
   <h1>Create Job Opportunity</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/JobOpportunityServletCreate'/>" method="post">
 
-	Job ID:<input type="text" name="jobId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Job ID:<input type="text" name="jobID" value="${form.jobID}"/>
+	<span style="color: red; font-weight: 900">${errors.jobID }</span>
 	<br/>
-	Company Name:<input type="text" name="companyName" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	User ID:<input type="text" name="userID" value="${form.userID}"/>
+	<span style="color: red; font-weight: 900">${errors.userID }</span>
 	<br/>
-	Position Title ：<input type="text" name="positionTitle" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Company ID:<input type="text" name="companyID" value="${form.companyID}"/>
+	<span style="color: red; font-weight: 900">${errors.companyID }</span>
 	<br/>
-	Salary：<input type="text" name="salary" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Position Title ：<input type="text" name="positionTitle" value="${form.positionTitle }"/>
+	<span style="color: red; font-weight: 900">${errors.positionTitle }</span>
 	<br/>
-	Job Description：<input type="text" name="jobDescription" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Salary：<input type="text" name="salary" value="${form.salary}"/>
+	<span style="color: red; font-weight: 900">${errors.salary }</span>
 	<br/>
-	Benefits Description ：<input type="text" name="benefits" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Job Description：<input type="text" name="jobDescription" value="${form.jobDescription }"/>
+	<span style="color: red; font-weight: 900">${errors.jobDescription }</span>
 	<br/>
-	Application Link ：<input type="text" name="application" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Benefits Description ：<input type="text" name="benefitDescription" value="${form.benefitDescription }"/>
+	<span style="color: red; font-weight: 900">${errors.benefitDescription }</span>
+	<br/>
+	Application Link ：<input type="text" name="applicationInfo" value="${form.applicationInfo }"/>
+	<span style="color: red; font-weight: 900">${errors.applicationInfo }</span>
 	<br/>
 	<input type="submit" value="Create Job Opportunity"/>
 </form>

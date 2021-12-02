@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package job_opportunity.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.Entity1;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import job_opportunity.domain.JobOpportunity;
+import job_opportunity.service.JobOpportunityException;
+import job_opportunity.service.JobOpportunityService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class JobOpportunityServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public JobOpportunityServletCreate() {
         super();
     }
 
@@ -41,24 +41,30 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		JobOpportunityService jobService = new JobOpportunityService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		Entity1 form = new Entity1();
+		JobOpportunity form = new JobOpportunity();
 		List<String> info = new ArrayList<String>();
 
 		for(String name : paramMap.keySet()) {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		
+		form.setJobID(Integer.parseInt(info.get(0)));
+		form.setUserID(Integer.parseInt(info.get(1)));
+		form.setCompanyID(Integer.parseInt(info.get(2)));
+		form.setPositionTitle(info.get(3));
+		form.setSalary(Float.parseFloat(info.get(4)));
+		form.setJobDescription(info.get(5));
+		form.setBenefitDescription(info.get(6));
+		form.setApplicationInfo(info.get(7));		
 		
 		try {
-			entity1service.create(form);
+			jobService.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | JobOpportunityException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
 			e.printStackTrace();

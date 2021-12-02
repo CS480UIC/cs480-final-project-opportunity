@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package job_opportunity.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import job_opportunity.dao.JobOpportunityDao;
+import job_opportunity.domain.JobOpportunity;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletUpdate extends HttpServlet {
+public class JobOpportunityServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Entity1ServletUpdate() {
+	public JobOpportunityServletUpdate() {
 		super();
 	}
 
@@ -41,13 +41,13 @@ public class Entity1ServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		JobOpportunityDao jobDao = new JobOpportunityDao();
+		JobOpportunity job = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByUsername(request.getParameter("username"));
+				job = jobDao.findByJobAndUserID(Integer.parseInt(request.getParameter("jobID")), Integer.parseInt(request.getParameter("userID")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,32 +56,38 @@ public class Entity1ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if((job.getJobID() != 0) && (job.getUserID() != 0)){
+				request.setAttribute("job", job);
+				request.getRequestDispatcher("/jsps/job_opportunity/job_opportunity_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/job_opportunity/job_opportunity_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Entity1 form = new Entity1();
+			JobOpportunity form = new JobOpportunity();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			
+			form.setJobID(Integer.parseInt(info.get(1)));
+			form.setUserID(Integer.parseInt(info.get(2)));
+			form.setCompanyID(Integer.parseInt(info.get(3)));
+			form.setPositionTitle(info.get(4));
+			form.setSalary(Float.parseFloat(info.get(5)));
+			form.setJobDescription(info.get(6));
+			form.setBenefitDescription(info.get(7));
+			form.setApplicationInfo(info.get(8));	
 
 			try {
-				entity1dao.update(form);
+				jobDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +96,8 @@ public class Entity1ServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Job Updated");
+			request.getRequestDispatcher("/jsps/job_opportunity/job_opportunity_read_output.jsp").forward(request, response);
 		}
 	}
 }

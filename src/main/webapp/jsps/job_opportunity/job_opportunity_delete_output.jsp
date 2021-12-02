@@ -23,19 +23,24 @@
   <body>
   <h1>Delete Company</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/JobOpportunityServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	Company ID:<input type="text" name="companyId" value="${form.username}" disabled/>
+	<input type="hidden" name="jobID" value="${job.jobID}" />
+	<input type="hidden" name="userID" value="${job.userID}" />
+	
+	Company ID:<input type="text" name="companyID" value="${job.companyID}" disabled/>
 	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password}" disabled/>
+	Position Title ：<input type="text" name="positionTitle" value="${job.positionTitle }" disabled/>
 	<br/>
-	Address：<input type="text" name="address" value="${form.email}" disabled/>
+	Salary：<input type="text" name="salary" value="${job.salary}" disabled/>
 	<br/>
-	Industry：<input type="text" name="industry" value="${form.email }" disabled/>
+	Job Description：<input type="text" name="jobDescription" value="${job.jobDescription }" disabled/>
 	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email }" disabled/>
+	Benefits Description ：<input type="text" name="benefitDescription" value="${job.benefitDescription }" disabled/>
 	<br/>
+	Application Link ：<input type="text" name="applicationInfo" value="${job.applicationInfo }" disabled/>
+	<br/>
+	
 	<input type="submit" value="Delete Company"/>
 </form>
 

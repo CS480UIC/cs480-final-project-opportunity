@@ -77,12 +77,6 @@ public class CompanyServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 			
-//			form.setCompany_id(Integer.parseInt(request.getParameter("company_id")));
-//			form.setName(request.getParameter("name"));
-//			form.setComp_address(request.getParameter("comp_addres"));
-//			form.setIndustry(request.getParameter("industry"));
-//			form.setReview(request.getParameter("review"));
-			
 			form.setCompany_id(Integer.parseInt(request.getParameter("company_id")));
 			form.setName(info.get(2));
 			form.setComp_address(info.get(3));

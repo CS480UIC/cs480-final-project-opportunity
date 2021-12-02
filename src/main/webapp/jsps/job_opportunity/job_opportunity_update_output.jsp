@@ -24,35 +24,41 @@
   <h1>Update Company</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Company ID:<input type="text" name="companyId" value="${form.username}" disabled/>
+	Job ID:<input type="text" name="jobID" value="${job.jobID}" disabled/>
 	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password}" disabled/>
+	User ID:<input type="text" name="userID" value="${job.userID}" disabled/>
 	<br/>
-	Address：<input type="text" name="address" value="${form.email}" disabled/>
+	Company ID:<input type="text" name="companyID" value="${job.companyID}" disabled/>
 	<br/>
-	Industry：<input type="text" name="industry" value="${form.email}" disabled/>
+	Position Title ：<input type="text" name="positionTitle" value="${job.positionTitle }" disabled/>
 	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email}" disabled/>
+	Salary：<input type="text" name="salary" value="${job.salary}" disabled/>
+	<br/>
+	Job Description：<input type="text" name="jobDescription" value="${job.jobDescription }" disabled/>
+	<br/>
+	Benefits Description ：<input type="text" name="benefitDescription" value="${job.benefitDescription }" disabled/>
+	<br/>
+	Application Link ：<input type="text" name="applicationInfo" value="${job.applicationInfo }" disabled/>
 	<br/>
 </form>
+
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Company ID:<input type="text" name="companyId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/JobOpportunityServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	<input type="hidden" name="jobID" value="${job.jobID}" />
+	<input type="hidden" name="userID" value="${job.userID}" />
+
+	Company ID:<input type="text" name="companyID" value="${form.companyID}" />
 	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Position Title ：<input type="text" name="positionTitle" value="${form.positionTitle }" />
 	<br/>
-	Address：<input type="text" name="address" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Salary：<input type="text" name="salary" value="${form.salary}" />
 	<br/>
-	Industry：<input type="text" name="industry" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Job Description：<input type="text" name="jobDescription" value="${form.jobDescription }" />
 	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Benefits Description ：<input type="text" name="benefitDescription" value="${form.benefitDescription }" />
+	<br/>
+	Application Link ：<input type="text" name="applicationInfo" value="${form.applicationInfo }" />
 	<br/>
 	<input type="submit" value="Update Company"/>
 </form>

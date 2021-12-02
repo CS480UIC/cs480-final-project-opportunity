@@ -22,10 +22,13 @@
   
   <body>
   <h1>Delete Job Opportunity</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/JobOpportunityServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Job ID  :<input type="text" name="jobId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Job ID:<input type="text" name="jobID" value="${form.jobID}"/>
+	<span style="color: red; font-weight: 900">${errors.jobID }</span>
+	<br/>
+	User ID:<input type="text" name="userID" value="${form.userID}"/>
+	<span style="color: red; font-weight: 900">${errors.userID }</span>
 	<br/>
 	<input type="submit" value="Delete Job Opportunity"/>
 </form>

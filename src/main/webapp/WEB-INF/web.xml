@@ -300,6 +300,57 @@
   <!-- END OF SERVLET FOR COMPANY ENTITY --> 
   
   
+  <!-- START OF SERVLET FOR JOB OPPORTUNITY ENTITY --> 
+  
+  <servlet>
+    <description></description>
+    <display-name>JobOpportunityServletCreate</display-name>
+    <servlet-name>JobOpportunityServletCreate</servlet-name>
+    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JobOpportunityServletCreate</servlet-name>
+    <url-pattern>/JobOpportunityServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>JobOpportunityServletRead</display-name>
+    <servlet-name>JobOpportunityServletRead</servlet-name>
+    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JobOpportunityServletRead</servlet-name>
+    <url-pattern>/JobOpportunityServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>JobOpportunityServletUpdate</display-name>
+    <servlet-name>JobOpportunityServletUpdate</servlet-name>
+    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JobOpportunityServletUpdate</servlet-name>
+    <url-pattern>/JobOpportunityServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>JobOpportunityServletDelete</display-name>
+    <servlet-name>JobOpportunityServletDelete</servlet-name>
+    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JobOpportunityServletDelete</servlet-name>
+    <url-pattern>/JobOpportunityServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  <!-- END OF SERVLET FOR JOB OPPORTUNITY ENTITY -->
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
