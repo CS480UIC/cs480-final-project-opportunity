@@ -29,29 +29,35 @@ public class Legal_resourceDao {
 	 */
 	private String MySQL_password = "CS480@UIC"; //TODO change password
 
-	public Legal_resource findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Legal_resource entity1 = new Legal_resource();
+	public Legal_resource findByUsername(Integer legalID, Integer userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		Legal_resource lr = new Legal_resource();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "SELECT * FROM legal_resource where legal_id = ? and user_id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,legalID);
+		    preparestatement.setInt(2,userID);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	int legal_id = resultSet.getInt("legal_id");
+		    	int user_id = resultSet.getInt("user_id");
+		    	if(legal_id == legalID && user_id == userID){
+		    		lr.setLegal_id(legal_id);
+		    		lr.setUser_id(user_id);
+		    		lr.setCost(resultSet.getDouble("cost"));
+		    		lr.setLegal_description(resultSet.getString("legal_description"));
+		    		lr.setResource_location(resultSet.getString("resource_location"));
+		    		lr.setResource_name(resultSet.getString("resource_name"));
+		    		lr.setContact_information(resultSet.getString("contact_information"));	
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return lr;
 	}	
 	
 	/**
@@ -67,11 +73,16 @@ public class Legal_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into legal_resource (legal_id, user_id, cost, legal_description, resource_location, resource_name, contact_information) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+		    preparestatement.setInt(1,form.getUser_id());
+		    preparestatement.setInt(2,form.getUser_id());
+		    preparestatement.setDouble(3,form.getCost());
+		    preparestatement.setString(4,form.getLegal_description());
+		    preparestatement.setString(5,form.getResource_location());
+		    preparestatement.setString(6,form.getResource_name());
+		    preparestatement.setString(7,form.getContact_information());
+		    
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -91,11 +102,15 @@ public class Legal_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE legal_resource SET cost = ?, legal_description = ?, resource_location = ?, resource_name = ?, contact_information = ? where legal_id = ? and user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setInt(1,form.getUser_id());
+		    preparestatement.setInt(2,form.getUser_id());
+		    preparestatement.setDouble(3,form.getCost());
+		    preparestatement.setString(4,form.getLegal_description());
+		    preparestatement.setString(5,form.getResource_location());
+		    preparestatement.setString(6,form.getResource_name());
+		    preparestatement.setString(7,form.getContact_information());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -115,7 +130,7 @@ public class Legal_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from legal_resource where legal_id = ? and user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
 		    preparestatement.executeUpdate();

@@ -3,7 +3,7 @@ package academic_resource.domain;
 /**
  * User object
  * 
- * @author Aayush Makharia
+ * @author Christina Wen
  * 
  */
 public class Academic_resource {
@@ -11,38 +11,100 @@ public class Academic_resource {
 	 * Correspond to the user table
 	 */
 	
-	private String username;
-	private String password; 
-	private String email;
+	private Integer academic_id;
+	private Integer user_id;
+	private String title;
+	private double payment_cost;
+	private String acad_subject;
+	private String academic_description;
+	private String acda_location;
 	
 	
-	public String getUsername() {
-		return username;
+	/**
+	 * @return the academic_id
+	 */
+	public Integer getAcademic_id() {
+		return academic_id;
 	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	/**
+	 * @param academic_id the academic_id to set
+	 */
+	public void setAcademic_id(Integer academic_id) {
+		this.academic_id = academic_id;
 	}
-
-	public String getPassword() {
-		return password;
+	/**
+	 * @return the user_id
+	 */
+	public Integer getUser_id() {
+		return user_id;
 	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	/**
+	 * @param user_id the user_id to set
+	 */
+	public void setUser_id(Integer user_id) {
+		this.user_id = user_id;
 	}
-
-	public String getEmail() {
-		return email;
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
 	}
-
-	@Override
-	public String toString() {
-		return "User [ username=" + username + ", password="
-				+ password + ", email=" + email +"]";
+	/**
+	 * @return the payment_cost
+	 */
+	public double getPayment_cost() {
+		return payment_cost;
 	}
+	/**
+	 * @param payment_cost the payment_cost to set
+	 */
+	public void setPayment_cost(double payment_cost) {
+		this.payment_cost = payment_cost;
+	}
+	/**
+	 * @return the acad_subject
+	 */
+	public String getAcad_subject() {
+		return acad_subject;
+	}
+	/**
+	 * @param acad_subject the acad_subject to set
+	 */
+	public void setAcad_subject(String acad_subject) {
+		this.acad_subject = acad_subject;
+	}
+	/**
+	 * @return the academic_description
+	 */
+	public String getAcademic_description() {
+		return academic_description;
+	}
+	/**
+	 * @param academic_description the academic_description to set
+	 */
+	public void setAcademic_description(String academic_description) {
+		this.academic_description = academic_description;
+	}
+	/**
+	 * @return the acda_location
+	 */
+	public String getAcda_location() {
+		return acda_location;
+	}
+	/**
+	 * @param acda_location the acda_location to set
+	 */
+	public void setAcda_location(String acda_location) {
+		this.acda_location = acda_location;
+	}
+	
+	
+	
 }

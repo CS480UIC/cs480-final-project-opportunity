@@ -2,7 +2,6 @@ package academic_resource.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -11,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import legal_resource.dao.Legal_resourceDao;
-import legal_resource.domain.Legal_resource;
+import academic_resource.dao.Academic_resourceDao;
+import academic_resource.domain.Academic_resource;
 
 /**
  * Servlet implementation class UserServlet
@@ -41,13 +40,13 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Legal_resourceDao entity1dao = new Legal_resourceDao();
-		Legal_resource entity1 = null;
+		Academic_resourceDao ardao = new Academic_resourceDao();
+		Academic_resource ar = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByUsername(request.getParameter("username"));
+				ar = ardao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academic_id")), Integer.parseInt(request.getParameter("user_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,8 +55,8 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
+			if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
+				request.setAttribute("academic_resource", ar);
 				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
 
 			}
@@ -69,19 +68,23 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Legal_resource form = new Legal_resource();
+			Academic_resource form = new Academic_resource();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setAcademic_id(Integer.parseInt(info.get(0)));
+			form.setUser_id(Integer.parseInt(info.get(1)));
+			form.setTitle(info.get(2));
+			form.setPayment_cost(Double.parseDouble(info.get(3)));
+			form.setAcad_subject(info.get(4));
+			form.setAcademic_description(info.get(5));
+			form.setAcda_location(info.get(6));
 
 			try {
-				entity1dao.update(form);
+				ardao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

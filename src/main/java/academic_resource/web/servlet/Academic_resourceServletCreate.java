@@ -2,7 +2,6 @@ package academic_resource.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -50,9 +49,13 @@ public class Academic_resourceServletCreate extends HttpServlet {
 			String[] values = paramMap.get(name);
 			info.add(values[0]);
 		}
-		form.setUsername(info.get(0));
-		form.setPassword(info.get(1));
-		form.setEmail(info.get(2));		
+		form.setAcademic_id(Integer.parseInt(info.get(0)));
+		form.setUser_id(Integer.parseInt(info.get(1)));
+		form.setTitle(info.get(2));
+		form.setPayment_cost(Double.parseDouble(info.get(3)));
+		form.setAcad_subject(info.get(4));
+		form.setAcademic_description(info.get(5));
+		form.setAcda_location(info.get(6));
 		
 		try {
 			entity1service.create(form);

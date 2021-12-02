@@ -37,11 +37,11 @@ public class Academic_resourceServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Academic_resource entity1 = null;
-		Academic_resourceDao entity1Dao = new Academic_resourceDao();
+		Academic_resource ar = null;
+		Academic_resourceDao arDao = new Academic_resourceDao();
 		
 		try {
-			entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+			ar = arDao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academic_id")), Integer.parseInt(request.getParameter("user_id")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,9 +50,9 @@ public class Academic_resourceServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(entity1.getUsername()!=null){
-					System.out.println(entity1);
-					request.setAttribute("entity1", entity1);
+		if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
+					System.out.println(ar);
+					request.setAttribute("academic_resource", ar);
 					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 			else{
