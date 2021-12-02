@@ -57,7 +57,7 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 
 			if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
 				request.setAttribute("academic_resource", ar);
-				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/academic_resource/academic_resource_update_output.jsp").forward(request, response);
 
 			}
 			else{

@@ -36,7 +36,7 @@
 	<br/>
 	Academic Description	:<input type="text" name="academicDescription" value="${academic_resource.academic_description }" disabled/>
 	<br/>
-	Academic Location	:<input type="text" name="acadLocation" value="${academic_resource.acda_location }" disabled/>
+	Academic Location	:<input type="text" name="acadLocation" value="${academic_resource.acad_location }" disabled/>
 	<br/>
 </form>
 

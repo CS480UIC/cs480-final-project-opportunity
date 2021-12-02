@@ -27,6 +27,9 @@
 	Delete Academic ID   :<input type="text" name="academicId" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
+	Delete User ID :<input type="text" name="userId" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
+	<br/>
 	<input type="submit" value="Delete Academic Resource"/>
 </form>
   </body>

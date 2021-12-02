@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Update Academic Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,8 +21,8 @@
   </head>
   
   <body>
-<h1>the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<h1>Update the values below</h1>
+<form action="<c:url value='/Academic_resourceServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 		<input type="hidden" name="academicId" value="${academic_resource.academicId }"/>
 		<input type="hidden" name="userId" value="${academic_resource.user_id }"/>
@@ -38,8 +38,8 @@
 	Academic Description	：<input type="text" name="academicDescription" value="${form.academic_description }"/>
 	<span style="color: red; font-weight: 900">${errors.academic_description }</span>
 	<br/>
-	Academic Location	：<input type="text" name="acadLocation" value="${form.acda_location }"/>
-	<span style="color: red; font-weight: 900">${errors.acda_location }</span>
+	Academic Location	：<input type="text" name="acadLocation" value="${form.acad_location }"/>
+	<span style="color: red; font-weight: 900">${errors.acad_location }</span>
 	<br/>
 	<input type="submit" value="Entity1"/>
 </form>

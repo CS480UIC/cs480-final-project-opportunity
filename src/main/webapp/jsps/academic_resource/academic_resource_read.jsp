@@ -41,8 +41,8 @@
 	Academic Description	：<input type="text" name="academicDescription" value="${form.academic_description }"/>
 	<span style="color: red; font-weight: 900">${errors.academic_description }</span>
 	<br/>
-	Academic Location	：<input type="text" name="acadLocation" value="${form.acda_location }"/>
-	<span style="color: red; font-weight: 900">${errors.acda_location }</span>
+	Academic Location	：<input type="text" name="acadLocation" value="${form.acad_location }"/>
+	<span style="color: red; font-weight: 900">${errors.acad_location }</span>
 	<br/>
 	<input type="submit" value="Read Academic Resource"/>
 </form>

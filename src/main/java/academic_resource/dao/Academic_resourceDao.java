@@ -49,7 +49,7 @@ public class Academic_resourceDao {
 		    		ar.setTitle(resultSet.getString("title"));
 		    		ar.setPayment_cost(resultSet.getDouble("payment_cost"));
 		    		ar.setAcad_subject(resultSet.getString("acad_subject"));
-		    		ar.setAcademic_description(resultSet.getString("acad_description"));
+		    		ar.setAcademic_description(resultSet.getString("academic_description"));
 		    		ar.setAcad_location(resultSet.getString("acad_location"));
 		    	}
 		    }
@@ -101,7 +101,7 @@ public class Academic_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 
-			String sql = "UPDATE academic_resource SET title = ?, payment_cost = ?, acad_subject = ?, academic_description = ?, acda_location = ? where academic_id = ? and user_id = ?;";
+			String sql = "UPDATE academic_resource SET title = ?, payment_cost = ?, acad_subject = ?, academic_description = ?, acad_location = ? where academic_id = ? and user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setInt(1,form.getAcademic_id());
 		    preparestatement.setInt(2,form.getUser_id());
