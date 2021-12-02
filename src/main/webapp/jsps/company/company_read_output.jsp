@@ -19,23 +19,22 @@
 	-->
 
   </head>
-  
   <body>
   <h1>Read Company Output</h1>
 <p style="color: red; font-weight: 900">${msg}</p>
 <form>
-	Company ID:<input type="text" name="companyId" value="${form.username}" disabled/>
+	Company ID:<input type="text" name="company_id" value="${company.company_id}" disabled/>
 	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password}" disabled/>
+	Company Name：<input type="text" name="name" value="${company.name}" disabled/>
 	<br/>
-	Address：<input type="text" name="address" value="${form.email}" disabled/>
+	Address：<input type="text" name=comp_address value="${company.comp_address}" disabled/>
 	<br/>
-	Industry：<input type="text" name="industry" value="${form.email}" disabled/>
+	Industry：<input type="text" name="industry" value="${company.industry}" disabled/>
 	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email}" disabled/>
+	Company Review	：<input type="text" name="review" value="${company.review}" disabled/>
 	<br/>
 </form>
 
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'"> Done </button>
 </body>
 </html>

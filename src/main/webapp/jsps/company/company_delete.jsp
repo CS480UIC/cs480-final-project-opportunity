@@ -22,10 +22,11 @@
   
   <body>
   <h1>Delete Company</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/CompanyServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Company ID  :<input type="text" name="companyId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Delete Company ID  :<input type="text" name="company_id" value="${form.company_id}"/>
+	<span style="color: red; font-weight: 900">${errors.company_id }</span>
 	<br/>
 	<input type="submit" value="Delete Company"/>
 </form>

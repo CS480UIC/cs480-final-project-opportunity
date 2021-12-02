@@ -22,22 +22,11 @@
   
   <body>
   <h1>Update Company</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/CompanyServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Company ID:<input type="text" name="companyId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Company with Company ID:<input type="text" name="company_id" value="${form.company_id}"/>
+	<span style="color: red; font-weight: 900">${errors.company_id}</span>
 	<br/>
-	Update Company Name：<input type="text" name="companyName" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Update Address：<input type="text" name="address" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Industry：<input type="text" name="industry" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Company Review	：<input type="text" name="review" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 	<input type="submit" value="Update Company"/>
 </form>

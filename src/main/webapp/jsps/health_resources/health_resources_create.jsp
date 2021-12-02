@@ -22,9 +22,12 @@
   
   <body>
   <h1>Create Health Resources</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/Health_ResourcesServletCreate'/>" method="post">
 	Health Resources ID:<input type="text" name="healthResourcesId" value="${form.username}"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
+	User ID    :<input type="text" name="userId" value="${form.userId }"/>
+	<span style="color: red; font-weight: 900">${errors.userId }</span>
 	<br/>
 	Health Resources Contact ：<input type="text" name="contact" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>

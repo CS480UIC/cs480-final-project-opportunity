@@ -23,23 +23,11 @@
   <body>
   <h1>Read Company</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/CompanyServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Company ID:<input type="text" name="companyId" value="${form.username}"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Address：<input type="text" name="address" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Industry：<input type="text" name="industry" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email}"/>
-	<span style="color: red; font-weight: 900">${errors.email}</span>
-	<br/>
+	Company ID:<input type="text" name="company_id" value="${form.company_id}"/>
+	<br>
+	<br>
 	<input type="submit" value="Read Company"/>
 </form>
   </body>

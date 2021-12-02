@@ -23,18 +23,20 @@
   <body>
   <h1>Delete Company</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/CompanyServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	Company ID:<input type="text" name="companyId" value="${form.username}" disabled/>
+	<input type="hidden" name="company_id" value="${company.company_id}"/>
+	
+	 
+	Company ID:<input type="text" name="company_id" value="${company.company_id}" disabled/>
 	<br/>
-	Company Name：<input type="text" name="companyName" value="${form.password}" disabled/>
+	Company Name：<input type="text" name="name" value="${company.name}" disabled/>
 	<br/>
-	Address：<input type="text" name="address" value="${form.email}" disabled/>
+	Address：<input type="text" name=comp_address value="${company.comp_address}" disabled/>
 	<br/>
-	Industry：<input type="text" name="industry" value="${form.email }" disabled/>
+	Industry：<input type="text" name="industry" value="${company.industry}" disabled/>
 	<br/>
-	Company Review	：<input type="text" name="review" value="${form.email }" disabled/>
+	Company Review	：<input type="text" name="review" value="${company.review}" disabled/>
 	<br/>
 	<input type="submit" value="Delete Company"/>
 </form>

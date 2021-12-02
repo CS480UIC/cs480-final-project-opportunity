@@ -230,6 +230,76 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+ 
+ <!-- Start of servlet for the Health_Resources entity -->  
+
+  <servlet>
+    <description></description>
+    <display-name>Health_ResourcesServletCreate</display-name>
+    <servlet-name>Health_ResourcesServletCreate</servlet-name>
+    <servlet-class>health_resources.web.servlet.Health_ResourcesServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Health_ResourcesServletCreate</servlet-name>
+    <url-pattern>/Health_ResourcesServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <!--End of servlet for the Health_Resources entity-->
+  
+  
+  <!-- START OF SERVLET FOR COMPANY ENTITY --> 
+  
+  <servlet>
+    <description></description>
+    <display-name>CompanyServletCreate</display-name>
+    <servlet-name>CompanyServletCreate</servlet-name>
+    <servlet-class>company.web.servlet.CompanyServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyServletCreate</servlet-name>
+    <url-pattern>/CompanyServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CompanyServletRead</display-name>
+    <servlet-name>CompanyServletRead</servlet-name>
+    <servlet-class>company.web.servlet.CompanyServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyServletRead</servlet-name>
+    <url-pattern>/CompanyServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CompanyServletUpdate</display-name>
+    <servlet-name>CompanyServletUpdate</servlet-name>
+    <servlet-class>company.web.servlet.CompanyServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyServletUpdate</servlet-name>
+    <url-pattern>/CompanyServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>CompanyServletDelete</display-name>
+    <servlet-name>CompanyServletDelete</servlet-name>
+    <servlet-class>company.web.servlet.CompanyServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanyServletDelete</servlet-name>
+    <url-pattern>/CompanyServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- END OF SERVLET FOR COMPANY ENTITY --> 
+  
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
