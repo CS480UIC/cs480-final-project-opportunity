@@ -36,12 +36,12 @@ public class Legal_resourceServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Legal_resourceDao entity1Dao = new Legal_resourceDao();
-		Legal_resource entity1 = null;
+		Legal_resourceDao lrDao = new Legal_resourceDao();
+		Legal_resource lr = null;
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1Dao.findByUsername(request.getParameter("username"));
+				lr = lrDao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legal_id")), Integer.parseInt(request.getParameter("user_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +50,20 @@ public class Legal_resourceServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(entity1.getUsername()!=null){
-						System.out.println(entity1);
-						request.setAttribute("entity1", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);			
+			if(lr.getLegal_id()!=null && lr.getUser_id()!=null){
+						System.out.println(lr);
+						request.setAttribute("legal_resource", lr);
+						request.getRequestDispatcher("/jsps/legal_resource/legal_resource_delete_output.jsp").forward(request, response);			
 				}
 				else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
 			try {
-				entity1Dao.delete(request.getParameter("username"));
+				lrDao.delete(request.getParameter("legal_id"), request.getParameter("user_id"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -72,7 +72,7 @@ public class Legal_resourceServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Deleted");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 		}
 	}
 }

@@ -56,7 +56,7 @@ public class Academic_resourceServletDelete extends HttpServlet {
 						request.getRequestDispatcher("/jsps/academic_resource/academic_resource_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Entity not found");
+				request.setAttribute("msg", "Academic Resource not found");
 				request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 			}
 		}
@@ -71,7 +71,7 @@ public class Academic_resourceServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Deleted");
+			request.setAttribute("msg", "Academic Resource Deleted");
 			request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 		}
 	}

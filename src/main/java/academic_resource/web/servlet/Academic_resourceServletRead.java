@@ -50,14 +50,14 @@ public class Academic_resourceServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
+		if(ar.getAcademic_id()!=0 && ar.getUser_id()!=0){
 					System.out.println(ar);
 					request.setAttribute("academic_resource", ar);
-					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+					request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Academic Resource not found");
+			request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 		}
 	}
 }

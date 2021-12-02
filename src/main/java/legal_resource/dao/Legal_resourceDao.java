@@ -29,11 +29,11 @@ public class Legal_resourceDao {
 	 */
 	private String MySQL_password = "CS480@UIC"; //TODO change password
 
-	public Legal_resource findByUsername(Integer legalID, Integer userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public Legal_resource findByLegalIDAndUserID(Integer legalID, Integer userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Legal_resource lr = new Legal_resource();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 		    String sql = "SELECT * FROM legal_resource where legal_id = ? and user_id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,legalID);
@@ -71,7 +71,7 @@ public class Legal_resourceDao {
 	public void add(Legal_resource form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
 			String sql = "insert into legal_resource (legal_id, user_id, cost, legal_description, resource_location, resource_name, contact_information) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -100,7 +100,7 @@ public class Legal_resourceDao {
 	public void update(Legal_resource form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE legal_resource SET cost = ?, legal_description = ?, resource_location = ?, resource_name = ?, contact_information = ? where legal_id = ? and user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -125,14 +125,15 @@ public class Legal_resourceDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String legalID, String userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
 			String sql = "delete from legal_resource where legal_id = ? and user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+			preparestatement.setInt(1,Integer.parseInt(legalID));
+		    preparestatement.setInt(2,Integer.parseInt(userID));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

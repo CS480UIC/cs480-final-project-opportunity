@@ -40,7 +40,7 @@ public class Academic_resourceServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Academic_resourceService entity1service = new Academic_resourceService();
+		Academic_resourceService arService = new Academic_resourceService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Academic_resource form = new Academic_resource();
 		List<String> info = new ArrayList<String>();
@@ -58,7 +58,7 @@ public class Academic_resourceServletCreate extends HttpServlet {
 		form.setAcda_location(info.get(6));
 		
 		try {
-			entity1service.create(form);
+			arService.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | Academic_resourceException e) {

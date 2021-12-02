@@ -2,7 +2,6 @@ package legal_resource.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -41,13 +40,13 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Legal_resourceDao entity1dao = new Legal_resourceDao();
-		Legal_resource entity1 = null;
+		Legal_resourceDao lrdao = new Legal_resourceDao();
+		Legal_resource lr = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByUsername(request.getParameter("username"));
+				lr = lrdao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legal_id")), Integer.parseInt(request.getParameter("user_id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +55,14 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(lr.getLegal_id()!=null && lr.getUser_id()!=null){
+				request.setAttribute("legal_resource", lr);
+				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
 
 			}
 			else{
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +75,16 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
+			form.setLegal_id(Integer.parseInt(request.getParameter("legalID")));
+			form.setUser_id(Integer.parseInt(request.getParameter("userID")));
+			form.setCost(Double.parseDouble(info.get(2)));
+			form.setLegal_description(info.get(3));
+			form.setResource_location(info.get(4));
+			form.setResource_name(info.get(5));
+			form.setContact_information(info.get(6));			
 
 			try {
-				entity1dao.update(form);
+				lrdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -91,7 +94,7 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
 		}
 	}
 }

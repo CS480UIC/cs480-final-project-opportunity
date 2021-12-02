@@ -33,7 +33,7 @@ public class Academic_resourceDao {
 		Academic_resource ar = new Academic_resource();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 		    String sql = "SELECT * FROM academic_resource where academic_id = ? and user_id = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,academicID);
@@ -71,7 +71,7 @@ public class Academic_resourceDao {
 	public void add(Academic_resource form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
 			String sql = "insert into academic_resource values(academic_id,user_id,title,payment_cost,acad_subject,academic_description,acda_location) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -99,7 +99,7 @@ public class Academic_resourceDao {
 	public void update(Academic_resource form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 
 			String sql = "UPDATE academic_resource SET title = ?, payment_cost = ?, acad_subject = ?, academic_description = ?, acda_location = ? where academic_id = ? and user_id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -126,7 +126,7 @@ public class Academic_resourceDao {
 	public void delete(String academicID, String userID) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
 			String sql = "delete from academic_resource where academic_id = ? and user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 

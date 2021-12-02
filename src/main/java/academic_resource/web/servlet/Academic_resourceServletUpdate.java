@@ -57,12 +57,12 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 
 			if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
 				request.setAttribute("academic_resource", ar);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Academic Resource not found");
+				request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -93,8 +93,8 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Academic Resource Updated");
+			request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 		}
 	}
 }
