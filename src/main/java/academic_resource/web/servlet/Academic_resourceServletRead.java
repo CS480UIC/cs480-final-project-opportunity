@@ -41,7 +41,7 @@ public class Academic_resourceServletRead extends HttpServlet {
 		Academic_resourceDao arDao = new Academic_resourceDao();
 		
 		try {
-			ar = arDao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academic_id")), Integer.parseInt(request.getParameter("user_id")));
+			ar = arDao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academicId")), Integer.parseInt(request.getParameter("userId")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,7 +50,7 @@ public class Academic_resourceServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(ar.getAcademic_id()!=0 && ar.getUser_id()!=0){
+		if(ar.getAcademic_id()!=null && ar.getUser_id()!=null){
 					System.out.println(ar);
 					request.setAttribute("academic_resource", ar);
 					request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);

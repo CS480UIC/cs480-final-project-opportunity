@@ -22,24 +22,27 @@
   
   <body>
   <h1>Read Academic Resource</h1>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	Academic ID :<input type="text" name="academicId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Academic_resourceServletRead'/>" method="post">
+	Academic ID :<input type="text" name="academicId" value="${form.academic_id }"/>
+	<span style="color: red; font-weight: 900">${errors.academic_id }</span>
 	<br/>
-	Title：<input type="text" name="title" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	User ID：<input type="text" name="userId" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
-	Payment Cost ：<input type="text" name="paymentCost" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Title：<input type="text" name="title" value="${form.title }"/>
+	<span style="color: red; font-weight: 900">${errors.title }</span>
 	<br/>
-	Academic Subject ：<input type="text" name="acdaSubject" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Payment Cost ：<input type="text" name="paymentCost" value="${form.payment_cost }"/>
+	<span style="color: red; font-weight: 900">${errors.payment_cost }</span>
 	<br/>
-	Academic Description	：<input type="text" name="academicDescription" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Academic Subject ：<input type="text" name="acdaSubject" value="${form.acad_subject }"/>
+	<span style="color: red; font-weight: 900">${errors.acad_subject }</span>
 	<br/>
-	Academic Location	：<input type="text" name="acadLocation" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Academic Description	：<input type="text" name="academicDescription" value="${form.academic_description }"/>
+	<span style="color: red; font-weight: 900">${errors.academic_description }</span>
+	<br/>
+	Academic Location	：<input type="text" name="acadLocation" value="${form.acda_location }"/>
+	<span style="color: red; font-weight: 900">${errors.acda_location }</span>
 	<br/>
 	<input type="submit" value="Read Academic Resource"/>
 </form>

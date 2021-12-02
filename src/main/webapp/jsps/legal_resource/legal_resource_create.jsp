@@ -22,10 +22,13 @@
   
   <body>
   <h1>Create Legal Resource</h1>
-<form action="<c:url value='Legal_resourceServletCreate'/>" method="post">
+<form action="<c:url value='/Legal_resourceServletCreate'/>" method="post">
 	Legal ID :<input type="text" name="legalId" value="${form.legal_id }"/>
 	<span style="color: red; font-weight: 900">${errors.legal_id }</span>
 	<br/>
+	User ID :<input type="text" name="userId" value="${form.user_id }"/>
+    <span style="color: red; font-weight: 900">${errors.user_id }</span>
+    <br/>
 	Cost：<input type="text" name="cost" value="${form.cost }"/>
 	<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
@@ -41,7 +44,7 @@
 	Contact Information	：<input type="text" name="contactInformation" value="${form.contact_information }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_information }</span>
 	<br/>
-	<input type="submit" value="Create Academic Resource"/>
+	<input type="submit" value="Create Legal Resource"/>
 </form>
   </body>
 </html>

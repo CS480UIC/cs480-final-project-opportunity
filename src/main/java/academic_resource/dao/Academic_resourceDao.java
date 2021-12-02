@@ -50,7 +50,7 @@ public class Academic_resourceDao {
 		    		ar.setPayment_cost(resultSet.getDouble("payment_cost"));
 		    		ar.setAcad_subject(resultSet.getString("acad_subject"));
 		    		ar.setAcademic_description(resultSet.getString("acad_description"));
-		    		ar.setAcda_location(resultSet.getString("acad_location"));
+		    		ar.setAcad_location(resultSet.getString("acad_location"));
 		    	}
 		    }
 		    connect.close();
@@ -73,7 +73,7 @@ public class Academic_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
-			String sql = "insert into academic_resource values(academic_id,user_id,title,payment_cost,acad_subject,academic_description,acda_location) values(?,?,?,?,?,?,?)";
+			String sql = "insert into academic_resource (academic_id,user_id,title,payment_cost,acad_subject,academic_description,acad_location) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setInt(1,form.getAcademic_id());
 		    preparestatement.setInt(2,form.getUser_id());
@@ -81,7 +81,7 @@ public class Academic_resourceDao {
 		    preparestatement.setDouble(4,form.getPayment_cost());
 		    preparestatement.setString(5,form.getAcad_subject());
 		    preparestatement.setString(6,form.getAcademic_description());
-		    preparestatement.setString(7,form.getAcda_location());
+		    preparestatement.setString(7,form.getAcad_location());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -109,7 +109,7 @@ public class Academic_resourceDao {
 		    preparestatement.setDouble(4,form.getPayment_cost());
 		    preparestatement.setString(5,form.getAcad_subject());
 		    preparestatement.setString(6,form.getAcademic_description());
-		    preparestatement.setString(7,form.getAcda_location());
+		    preparestatement.setString(7,form.getAcad_location());
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);

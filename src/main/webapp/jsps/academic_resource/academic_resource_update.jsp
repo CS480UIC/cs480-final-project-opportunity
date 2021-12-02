@@ -22,25 +22,13 @@
   
   <body>
   <h1>Update Academic Resource</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Academic_resourceServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Academic ID :<input type="text" name="academicId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Academic ID :<input type="text" name="academicId" value="${form.academic_id }"/>
+	<span style="color: red; font-weight: 900">${errors.academic_id }</span>
 	<br/>
-	Update Title：<input type="text" name="title" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Update Payment Cost ：<input type="text" name="paymentCost" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Academic Subject ：<input type="text" name="acdaSubject" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Academic Description	：<input type="text" name="academicDescription" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Academic Location	：<input type="text" name="acadLocation" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Update User ID :<input type="text" name="userId" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
 	<input type="submit" value="Update Academic Resource"/>
 </form>

@@ -24,8 +24,8 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Legal_resourceServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-		<input type="hidden" name="legalID" value="${legal_resource.legal_id }"/>
-		<input type="hidden" name="userID" value="${legal_resource.user_id }"/>
+		<input type="hidden" name="legalId" value="${legal_resource.legal_id }"/>
+		<input type="hidden" name="userId" value="${legal_resource.user_id }"/>
 	Cost：<input type="text" name="cost" value="${form.cost }"/>
 	<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>
@@ -41,7 +41,7 @@
 	Contact Information	：<input type="text" name="contactInformation" value="${form.contact_information }"/>
 	<span style="color: red; font-weight: 900">${errors.contact_information }</span>
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	<input type="submit" value="Update Legal Resource"/>
 </form>
 
 </body>

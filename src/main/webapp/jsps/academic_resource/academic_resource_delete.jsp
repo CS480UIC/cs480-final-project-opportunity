@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete Academic Resource</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Academic_resourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Academic ID   :<input type="text" name="academicId" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

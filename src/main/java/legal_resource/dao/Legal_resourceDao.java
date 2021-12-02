@@ -75,7 +75,7 @@ public class Legal_resourceDao {
 			
 			String sql = "insert into legal_resource (legal_id, user_id, cost, legal_description, resource_location, resource_name, contact_information) values(?,?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setInt(1,form.getUser_id());
+		    preparestatement.setInt(1,form.getLegal_id());
 		    preparestatement.setInt(2,form.getUser_id());
 		    preparestatement.setDouble(3,form.getCost());
 		    preparestatement.setString(4,form.getLegal_description());
@@ -102,15 +102,15 @@ public class Legal_resourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE legal_resource SET cost = ?, legal_description = ?, resource_location = ?, resource_name = ?, contact_information = ? where legal_id = ? and user_id = ?;";
+			String sql = "UPDATE legal_resource SET cost = ?, legal_description = ?, resource_location = ?, resource_name = ?, contact_information = ? where legal_id = ? and user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-			preparestatement.setInt(1,form.getUser_id());
-		    preparestatement.setInt(2,form.getUser_id());
-		    preparestatement.setDouble(3,form.getCost());
-		    preparestatement.setString(4,form.getLegal_description());
-		    preparestatement.setString(5,form.getResource_location());
-		    preparestatement.setString(6,form.getResource_name());
-		    preparestatement.setString(7,form.getContact_information());
+		    preparestatement.setDouble(1,form.getCost());
+		    preparestatement.setString(2,form.getLegal_description());
+		    preparestatement.setString(3,form.getResource_location());
+		    preparestatement.setString(4,form.getResource_name());
+		    preparestatement.setString(5,form.getContact_information());
+		    preparestatement.setInt(6,form.getLegal_id());
+		    preparestatement.setInt(7,form.getUser_id());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

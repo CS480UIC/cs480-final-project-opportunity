@@ -46,7 +46,7 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				ar = ardao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academic_id")), Integer.parseInt(request.getParameter("user_id")));
+				ar = ardao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academicId")), Integer.parseInt(request.getParameter("userId")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -75,13 +75,14 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setAcademic_id(Integer.parseInt(info.get(0)));
-			form.setUser_id(Integer.parseInt(info.get(1)));
-			form.setTitle(info.get(2));
-			form.setPayment_cost(Double.parseDouble(info.get(3)));
-			form.setAcad_subject(info.get(4));
-			form.setAcademic_description(info.get(5));
-			form.setAcda_location(info.get(6));
+			
+			form.setAcademic_id(Integer.parseInt(request.getParameter("academicId")));
+			form.setUser_id(Integer.parseInt(request.getParameter("userId")));
+			form.setTitle(info.get(3));
+			form.setPayment_cost(Double.parseDouble(info.get(4)));
+			form.setAcad_subject(info.get(5));
+			form.setAcademic_description(info.get(6));
+			form.setAcad_location(info.get(7));
 
 			try {
 				ardao.update(form);

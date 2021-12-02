@@ -17,7 +17,7 @@ public class Academic_resource {
 	private double payment_cost;
 	private String acad_subject;
 	private String academic_description;
-	private String acda_location;
+	private String acad_location;
 	
 	
 	/**
@@ -93,16 +93,16 @@ public class Academic_resource {
 		this.academic_description = academic_description;
 	}
 	/**
-	 * @return the acda_location
+	 * @return the acad_location
 	 */
-	public String getAcda_location() {
-		return acda_location;
+	public String getAcad_location() {
+		return acad_location;
 	}
 	/**
-	 * @param acda_location the acda_location to set
+	 * @param acad_location the acad_location to set
 	 */
-	public void setAcda_location(String acda_location) {
-		this.acda_location = acda_location;
+	public void setAcad_location(String acad_location) {
+		this.acad_location = acad_location;
 	}
 	
 	

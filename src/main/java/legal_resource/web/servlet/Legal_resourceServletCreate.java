@@ -40,7 +40,7 @@ public class Legal_resourceServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Legal_resourceService entity1service = new Legal_resourceService();
+		Legal_resourceService lrService = new Legal_resourceService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		Legal_resource form = new Legal_resource();
 		List<String> info = new ArrayList<String>();
@@ -58,7 +58,7 @@ public class Legal_resourceServletCreate extends HttpServlet {
 		form.setContact_information(info.get(6));		
 		
 		try {
-			entity1service.create(form);
+			lrService.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
 		} catch (ClassNotFoundException | Legal_resourceException e) {

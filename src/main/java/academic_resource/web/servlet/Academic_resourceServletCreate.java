@@ -55,7 +55,7 @@ public class Academic_resourceServletCreate extends HttpServlet {
 		form.setPayment_cost(Double.parseDouble(info.get(3)));
 		form.setAcad_subject(info.get(4));
 		form.setAcademic_description(info.get(5));
-		form.setAcda_location(info.get(6));
+		form.setAcad_location(info.get(6));
 		
 		try {
 			arService.create(form);

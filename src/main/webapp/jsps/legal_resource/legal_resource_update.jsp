@@ -27,21 +27,9 @@
 	Update Legal ID :<input type="text" name="legalId" value="${form.legal_id }"/>
 	<span style="color: red; font-weight: 900">${errors.legal_id }</span>
 	<br/>
-	Update Cost：<input type="text" name="cost" value="${form.cost }"/>
-	<span style="color: red; font-weight: 900">${errors.cost }</span>
-	<br/>
-	Update Legal Description ：<input type="text" name="legalDescription" value="${form.legal_description }"/>
-	<span style="color: red; font-weight: 900">${errors.legal_description }</span>
-	<br/>
-	Update Resource Location ：<input type="text" name="resourceLocation" value="${form.resource_location }"/>
-	<span style="color: red; font-weight: 900">${errors.resource_location }</span>
-	<br/>
-	Update Resource Name	：<input type="text" name="resourceName" value="${form.resource_name }"/>
-	<span style="color: red; font-weight: 900">${errors.resource_name }</span>
-	<br/>
-	Update Contact Information	：<input type="text" name="contactInformation" value="${form.contact_information }"/>
-	<span style="color: red; font-weight: 900">${errors.contact_information }</span>
-	<br/>
+	Update User ID :<input type="text" name="userId" value="${form.user_id }"/>
+    <span style="color: red; font-weight: 900">${errors.user_id }</span>
+    <br/>
 	<input type="submit" value="Update Legal Resource"/>
 </form>
   </body>

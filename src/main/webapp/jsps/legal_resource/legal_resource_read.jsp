@@ -28,6 +28,9 @@
 	Legal ID :<input type="text" name="legalId" value="${form.legal_id }"/>
 	<span style="color: red; font-weight: 900">${errors.legal_id }</span>
 	<br/>
+	User ID :<input type="text" name="userId" value="${form.user_id }"/>
+    <span style="color: red; font-weight: 900">${errors.user_id }</span>
+    <br/>
 	Cost：<input type="text" name="cost" value="${form.cost }"/>
 	<span style="color: red; font-weight: 900">${errors.cost }</span>
 	<br/>

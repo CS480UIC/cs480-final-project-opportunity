@@ -41,7 +41,7 @@ public class Academic_resourceServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				ar = arDao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academic_id")), Integer.parseInt(request.getParameter("user_id")));
+				ar = arDao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academicId")), Integer.parseInt(request.getParameter("userId")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -63,7 +63,7 @@ public class Academic_resourceServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
-				arDao.delete(request.getParameter("academic_id"), request.getParameter("user_id"));
+				arDao.delete(request.getParameter("academicId"), request.getParameter("userId"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

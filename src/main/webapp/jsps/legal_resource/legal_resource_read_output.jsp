@@ -24,9 +24,9 @@
   <h1>Read Legal Resource Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	Legal ID    :<input type="text" name="legal_id" value="${legal_resource.legal_id }" disabled/>
+	Legal ID    :<input type="text" name="legalId" value="${legal_resource.legal_id }" disabled/>
 	<br/>
-	User ID     :<input type="text" name="user_id" value="${legal_resource.user_id }" disabled/>
+	User ID     :<input type="text" name="userId" value="${legal_resource.user_id }" disabled/>
 	<br/>
 	Cost :<input type="text" name="cost" value="${legal_resource.cost }" disabled/>
 	<br/>

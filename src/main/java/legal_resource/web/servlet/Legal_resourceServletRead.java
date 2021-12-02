@@ -41,7 +41,7 @@ public class Legal_resourceServletRead extends HttpServlet {
 		Legal_resourceDao lrDao = new Legal_resourceDao();
 		
 		try {
-			lr = lrDao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legal_id")), Integer.parseInt(request.getParameter("user_id")));
+			lr = lrDao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legalId")), Integer.parseInt(request.getParameter("userId")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -56,7 +56,7 @@ public class Legal_resourceServletRead extends HttpServlet {
 					request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "Entity not found");
+			request.setAttribute("msg", "Legal Resource not found");
 			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 		}
 	}

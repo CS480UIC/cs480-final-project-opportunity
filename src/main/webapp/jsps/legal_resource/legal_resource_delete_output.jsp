@@ -25,11 +25,11 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Legal_resourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-	<input type="hidden" name="legal_id" value="${legal_resource.legal_id }"/>
-	<input type="hidden" name="user_id" value="${legal_resource.user_id }"/>
-	Legal ID    :<input type="text" name="legalID" value="${legal_resource.legal_id }" disabled/>
+	<input type="hidden" name="legalId" value="${legal_resource.legal_id }"/>
+	<input type="hidden" name="userId" value="${legal_resource.user_id }"/>
+	Legal ID    :<input type="text" name="legalId" value="${legal_resource.legal_id }" disabled/>
 	<br/>
-	User ID    :<input type="text" name="userID" value="${legal_resource.user_id }" disabled/>
+	User ID    :<input type="text" name="userId" value="${legal_resource.user_id }" disabled/>
 	<br/>
 	Cost：<input type="text" name="serviceName" value="${legal_resource.cost }" disabled/>
 	<br/>
@@ -41,7 +41,7 @@
 	<br/>
 	Contact Information	：<input type="text" name="contactInformation" value="${legal_resource.contact_information }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Legal Resource"/>
 </form>
 
 </body>

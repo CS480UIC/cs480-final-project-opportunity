@@ -46,7 +46,7 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				lr = lrdao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legal_id")), Integer.parseInt(request.getParameter("user_id")));
+				lr = lrdao.findByLegalIDAndUserID(Integer.parseInt(request.getParameter("legalId")), Integer.parseInt(request.getParameter("userId")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -75,13 +75,14 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setLegal_id(Integer.parseInt(request.getParameter("legalID")));
-			form.setUser_id(Integer.parseInt(request.getParameter("userID")));
-			form.setCost(Double.parseDouble(info.get(2)));
-			form.setLegal_description(info.get(3));
-			form.setResource_location(info.get(4));
-			form.setResource_name(info.get(5));
-			form.setContact_information(info.get(6));			
+			form.setLegal_id(Integer.parseInt(request.getParameter("legalId")));
+			form.setUser_id(Integer.parseInt(request.getParameter("userId")));
+			form.setCost(Double.parseDouble(info.get(3)));
+			form.setLegal_description(info.get(4));
+			form.setResource_location(info.get(5));
+			form.setResource_name(info.get(6));
+			form.setContact_information(info.get(7));
+			
 
 			try {
 				lrdao.update(form);
@@ -93,7 +94,7 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
+			request.setAttribute("msg", "Legal Resource Updated");
 			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
 		}
 	}
