@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Legal Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,25 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete Legal Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Legal_resourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<input type="hidden" name="legal_id" value="${legal_resource.legal_id }"/>
+	<input type="hidden" name="user_id" value="${legal_resource.user_id }"/>
+	Legal ID    :<input type="text" name="legalID" value="${legal_resource.legal_id }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	User ID    :<input type="text" name="userID" value="${legal_resource.user_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Cost：<input type="text" name="serviceName" value="${legal_resource.cost }" disabled/>
+	<br/>
+	Legal Description	：<input type="text" name="legalDescription" value="${legal_resource.legal_description }" disabled/>
+	<br/>
+	Resource Location	：<input type="text" name="resourceLocation" value="${legal_resource.resource_location }" disabled/>
+	<br/>
+	Resource Name	：<input type="text" name="resourceName" value="${legal_resource.resource_name }" disabled/>
+	<br/>
+	Contact Information	：<input type="text" name="contactInformation" value="${legal_resource.contact_information }" disabled/>
 	<br/>
 	<input type="submit" value="Delete Entity1"/>
 </form>
