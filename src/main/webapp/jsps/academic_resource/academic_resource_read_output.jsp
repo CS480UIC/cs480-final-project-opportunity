@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Legal Resource Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,22 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Legal Resource Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	Academic ID    :<input type="text" name="academicId" value="${academic_resource.academic_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	User ID    :<input type="text" name="userId" value="${academic_resource.user_id }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Title   :<input type="text" name="title" value="${academic_resource.title }" disabled/>
+	<br/>
+	Payment Cost: <input type="text" name="paymentCost" value="${academic_resource.payment_cost }" disabled/>
+	<br/>
+	Academic Subject	:<input type="text" name="acdaSubject" value="${academic_resource.acad_subject }" disabled/>
+	<br/>
+	Academic Description	:<input type="text" name="academicDescription" value="${academic_resource.academic_description }" disabled/>
+	<br/>
+	Academic Location	:<input type="text" name="acadLocation" value="${academic_resource.acad_location }" disabled/>
 	<br/>
 </form>
 

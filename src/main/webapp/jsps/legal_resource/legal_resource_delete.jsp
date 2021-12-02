@@ -22,10 +22,13 @@
   
   <body>
   <h1>Delete Legal Resource</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Legal_resourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Legal ID :<input type="text" name="legalID" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Delete Legal ID :<input type="text" name="legalId" value="${form.legal_id }"/>
+	<span style="color: red; font-weight: 900">${errors.legal_id }</span>
+	<br/>
+	Delete User ID :<input type="text" name="userId" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
 	<input type="submit" value="Delete Legal Resource"/>
 </form>

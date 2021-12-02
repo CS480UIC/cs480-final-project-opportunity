@@ -22,26 +22,14 @@
   
   <body>
   <h1>Update Legal Resource</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Legal_resourceServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Legal ID :<input type="text" name="legalId" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Update Legal ID :<input type="text" name="legalId" value="${form.legal_id }"/>
+	<span style="color: red; font-weight: 900">${errors.legal_id }</span>
 	<br/>
-	Update Cost：<input type="text" name="cost" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Update Legal Description ：<input type="text" name="legalDescription" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Resource Location ：<input type="text" name="resourceLocation" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Resource Name	：<input type="text" name="resourceName" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Update Contact Information	：<input type="text" name="contactInformation" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
+	Update User ID :<input type="text" name="userId" value="${form.user_id }"/>
+    <span style="color: red; font-weight: 900">${errors.user_id }</span>
+    <br/>
 	<input type="submit" value="Update Legal Resource"/>
 </form>
   </body>
