@@ -36,10 +36,12 @@
  	<br>
  	<a href="<c:url value='/findTutorService'/>" target="body">Please list all the tutors and tutoring services</a>&nbsp;&nbsp;
  	<br>
- 	<a href="<c:url value='/findAll'/>" target="body">Please list all the users and legal services</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findLRUser'/>" target="body">Please list all the users and legal services</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findAll'/>" target="body">Please list all the users linked to scholarships</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findTotalTutors'/>" target="body">Please list the number of tutors per subject</a>&nbsp;&nbsp;
+ 	<br>
+ 	<a href="<c:url value='/findARUser'/>" target="body">Please list all the users linked to academic resources</a>&nbsp;&nbsp;
   </body>
 </html>

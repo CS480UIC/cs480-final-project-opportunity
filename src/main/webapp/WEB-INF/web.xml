@@ -318,6 +318,31 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findARUser</display-name>
+    <servlet-name>findARUser</servlet-name>
+    
+    <servlet-class>academic_resource.web.servlet.findAllAcademicResource</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findARUser</servlet-name>
+    <url-pattern>/findARUser</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>findLRUser</display-name>
+    <servlet-name>findLRUser</servlet-name>
+    
+    <servlet-class>legal_resource.web.servlet.findAllUserLegalService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findLRUser</servlet-name>
+    <url-pattern>/findLRUser</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>

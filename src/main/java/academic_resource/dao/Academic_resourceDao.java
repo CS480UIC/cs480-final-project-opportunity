@@ -5,9 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -137,5 +136,32 @@ public class Academic_resourceDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "select * from academic_resource";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Academic_resource ar = new Academic_resource();
+				ar.setAcademic_id(resultSet.getInt("academic_id"));
+				ar.setUser_id(resultSet.getInt("user_id"));
+				ar.setTitle(resultSet.getString("title"));
+				ar.setPayment_cost(resultSet.getDouble("payment_cost"));
+	    		ar.setAcad_subject(resultSet.getString("acad_subject"));
+	    		ar.setAcademic_description(resultSet.getString("academic_description"));
+	    		ar.setAcad_location(resultSet.getString("acad_location"));
+	    		list.add(ar);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

@@ -17,7 +17,7 @@
 	</tr>
 <c:forEach items="${UserLegalList}" var="userLegal">
 	<tr>
-		<td>${userLegal.user_name}</td>
+		<td>${userLegal.username}</td>
 		<td>${userLegal.cost}</td>
 		<td>${userLegal.legal_description}</td>
 	</tr>

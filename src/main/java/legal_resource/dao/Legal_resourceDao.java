@@ -5,14 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import legal_resource.domain.LegalResourceUser;
+import legal_resource.domain.Legal_resource;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
-import legal_resource.domain.Legal_resource;
 
 /**
  * DDL functions performed in database
@@ -139,5 +140,32 @@ public class Legal_resourceDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findAllUserLR() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "SELECT username, cost, legal_description FROM user AS U INNER JOIN legal_resource AS LR\n"
+					+ "	ON U.user_id = LR.user_id";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				LegalResourceUser lrU = new LegalResourceUser();
+				lrU.setUsername(resultSet.getString("username"));
+				lrU.setCost(resultSet.getDouble("cost"));
+				lrU.setLegal_description(resultSet.getString("legal_description"));
+				System.out.println(resultSet.getString("username"));
+				System.out.println(resultSet.getDouble("cost"));
+
+	    		list.add(lrU);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }
