@@ -319,151 +319,29 @@
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
   
- 
- <!-- Start of servlet for the Health_Resources entity -->  
-
   <servlet>
     <description></description>
-    <display-name>Health_ResourcesServletCreate</display-name>
-    <servlet-name>Health_ResourcesServletCreate</servlet-name>
-    <servlet-class>health_resources.web.servlet.Health_ResourcesServletCreate</servlet-class>
+    <display-name>findARUser</display-name>
+    <servlet-name>findARUser</servlet-name>
+    
+    <servlet-class>academic_resource.web.servlet.findAllAcademicResource</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Health_ResourcesServletCreate</servlet-name>
-    <url-pattern>/Health_ResourcesServletCreate</url-pattern>
+    <servlet-name>findARUser</servlet-name>
+    <url-pattern>/findARUser</url-pattern>
   </servlet-mapping>
   
-  <!--End of servlet for the Health_Resources entity-->
-  
-  
-  <!-- START OF SERVLET FOR COMPANY ENTITY --> 
-  
-  <servlet>
+   <servlet>
     <description></description>
-    <display-name>CompanyServletCreate</display-name>
-    <servlet-name>CompanyServletCreate</servlet-name>
-    <servlet-class>company.web.servlet.CompanyServletCreate</servlet-class>
+    <display-name>findLRUser</display-name>
+    <servlet-name>findLRUser</servlet-name>
+    
+    <servlet-class>legal_resource.web.servlet.findAllUserLegalService</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CompanyServletCreate</servlet-name>
-    <url-pattern>/CompanyServletCreate</url-pattern>
+    <servlet-name>findLRUser</servlet-name>
+    <url-pattern>/findLRUser</url-pattern>
   </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>CompanyServletRead</display-name>
-    <servlet-name>CompanyServletRead</servlet-name>
-    <servlet-class>company.web.servlet.CompanyServletRead</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CompanyServletRead</servlet-name>
-    <url-pattern>/CompanyServletRead</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>CompanyServletUpdate</display-name>
-    <servlet-name>CompanyServletUpdate</servlet-name>
-    <servlet-class>company.web.servlet.CompanyServletUpdate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CompanyServletUpdate</servlet-name>
-    <url-pattern>/CompanyServletUpdate</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-    <description></description>
-    <display-name>CompanyServletDelete</display-name>
-    <servlet-name>CompanyServletDelete</servlet-name>
-    <servlet-class>company.web.servlet.CompanyServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CompanyServletDelete</servlet-name>
-    <url-pattern>/CompanyServletDelete</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  <!-- END OF SERVLET FOR COMPANY ENTITY --> 
-  
-  
-  <!-- START OF SERVLET FOR JOB OPPORTUNITY ENTITY --> 
-  
-  <servlet>
-    <description></description>
-    <display-name>JobOpportunityServletCreate</display-name>
-    <servlet-name>JobOpportunityServletCreate</servlet-name>
-    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletCreate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JobOpportunityServletCreate</servlet-name>
-    <url-pattern>/JobOpportunityServletCreate</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-    <description></description>
-    <display-name>JobOpportunityServletRead</display-name>
-    <servlet-name>JobOpportunityServletRead</servlet-name>
-    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletRead</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JobOpportunityServletRead</servlet-name>
-    <url-pattern>/JobOpportunityServletRead</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>JobOpportunityServletUpdate</display-name>
-    <servlet-name>JobOpportunityServletUpdate</servlet-name>
-    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletUpdate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JobOpportunityServletUpdate</servlet-name>
-    <url-pattern>/JobOpportunityServletUpdate</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-    <description></description>
-    <display-name>JobOpportunityServletDelete</display-name>
-    <servlet-name>JobOpportunityServletDelete</servlet-name>
-    <servlet-class>job_opportunity.web.servlet.JobOpportunityServletDelete</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JobOpportunityServletDelete</servlet-name>
-    <url-pattern>/JobOpportunityServletDelete</url-pattern>
-  </servlet-mapping>
-  
-  <!-- END OF SERVLET FOR JOB OPPORTUNITY ENTITY -->
-  
-  
-  <servlet>
-	<description></description>
-	<display-name>findJobs</display-name>
-	<servlet-name>findJobs</servlet-name>
-	
-  <servlet-class>job_opportunity.web.servlet.findJobs</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>findJobs</servlet-name>
-    <url-pattern>/findJobs</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-	<description></description>
-	<display-name>findJobsAndCo</display-name>
-	<servlet-name>findJobsAndCo</servlet-name>
-	
-  <servlet-class>job_opportunity.web.servlet.findJobsAndCo</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>findJobsAndCo</servlet-name>
-    <url-pattern>/findJobsAndCo</url-pattern>
-  </servlet-mapping>
-  
-  
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
