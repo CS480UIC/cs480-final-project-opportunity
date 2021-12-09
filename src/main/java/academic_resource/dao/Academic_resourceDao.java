@@ -5,9 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -39,8 +38,12 @@ public class Academic_resourceDao {
 		    preparestatement.setInt(1,academicID);
 		    preparestatement.setInt(2,userID);
 		    ResultSet resultSet = preparestatement.executeQuery();
+			System.out.println("acad dao find userID: "+ academicID);
+			System.out.println("acad dao find userID: "+ userID);
 
 		    while(resultSet.next()){
+		    	System.out.println("acad dao find academic ID: "+ resultSet.getInt("academic_id"));
+				System.out.println("acad dao find User ID: "+ resultSet.getInt("user_id"));
 		    	int academic_id = resultSet.getInt("academic_id");
 		    	int user_id = resultSet.getInt("user_id");
 		    	if(academic_id ==  academicID && user_id == userID){
@@ -130,6 +133,9 @@ public class Academic_resourceDao {
 			
 			String sql = "delete from academic_resource where academic_id = ? and user_id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			System.out.println("Dao acadID: "+Integer.parseInt(academicID));
+			System.out.println("Dao userID: "+Integer.parseInt(userID));
+
 			preparestatement.setInt(1,Integer.parseInt(academicID));
 		    preparestatement.setInt(2,Integer.parseInt(userID));
 		    preparestatement.executeUpdate();
@@ -137,5 +143,32 @@ public class Academic_resourceDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findall() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/opportunity", MySQL_user, MySQL_password);
+			String sql = "select * from academic_resource";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Academic_resource ar = new Academic_resource();
+				ar.setAcademic_id(resultSet.getInt("academic_id"));
+				ar.setUser_id(resultSet.getInt("user_id"));
+				ar.setTitle(resultSet.getString("title"));
+				ar.setPayment_cost(resultSet.getDouble("payment_cost"));
+	    		ar.setAcad_subject(resultSet.getString("acad_subject"));
+	    		ar.setAcademic_description(resultSet.getString("academic_description"));
+	    		ar.setAcad_location(resultSet.getString("acad_location"));
+	    		list.add(ar);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

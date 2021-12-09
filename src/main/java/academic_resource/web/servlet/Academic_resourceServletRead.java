@@ -55,7 +55,7 @@ public class Academic_resourceServletRead extends HttpServlet {
 					request.setAttribute("academic_resource", ar);
 					request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 			}
-			else{
+		else{
 			request.setAttribute("msg", "Academic Resource not found");
 			request.getRequestDispatcher("/jsps/academic_resource/academic_resource_read_output.jsp").forward(request, response);
 		}

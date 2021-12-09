@@ -46,6 +46,8 @@ public class Academic_resourceServletUpdate extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
+				System.out.println("acad update acadID: "+ Integer.parseInt(request.getParameter("academicId")));
+				System.out.println("acad update userID: "+ Integer.parseInt(request.getParameter("userId")));
 				ar = ardao.findByAcadAndUserID(Integer.parseInt(request.getParameter("academicId")), Integer.parseInt(request.getParameter("userId")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

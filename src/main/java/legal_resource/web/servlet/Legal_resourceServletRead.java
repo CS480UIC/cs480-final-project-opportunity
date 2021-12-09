@@ -63,4 +63,3 @@ public class Legal_resourceServletRead extends HttpServlet {
 }
 
 
-

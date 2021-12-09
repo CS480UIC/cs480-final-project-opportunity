@@ -1,6 +1,8 @@
 package academic_resource.service;
 
 
+import java.util.List;
+
 import academic_resource.dao.Academic_resourceDao;
 import academic_resource.domain.Academic_resource;
 
@@ -24,6 +26,11 @@ public class Academic_resourceService {
 		Academic_resource ar = arDao.findByAcadAndUserID(form.getAcademic_id(), form.getUser_id());
 		if(ar.getTitle()!=null && ar.getAcademic_id().equals(form.getAcademic_id()) && ar.getUser_id().equals(form.getUser_id())) throw new Academic_resourceException("This user name has been registered!");
 		arDao.add(form);
+	}
+	
+	public List<Object> ARUserList() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return arDao.findall();
+		
 	}
 
 }

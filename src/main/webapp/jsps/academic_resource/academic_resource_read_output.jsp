@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Legal Resource Output</title>
+    <title>Read Academic Resource Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Read Legal Resource Output</h1>
+  <h1>Read Academic Resource Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	Academic ID    :<input type="text" name="academicId" value="${academic_resource.academic_id }" disabled/>

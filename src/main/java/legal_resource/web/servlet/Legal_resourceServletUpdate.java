@@ -61,7 +61,7 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
+				request.setAttribute("msg", "Legal Resource not found");
 				request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 			}
 		}
@@ -95,10 +95,9 @@ public class Legal_resourceServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Legal Resource Updated");
-			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_update_output.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/legal_resource/legal_resource_read_output.jsp").forward(request, response);
 		}
 	}
 }
-
 
 

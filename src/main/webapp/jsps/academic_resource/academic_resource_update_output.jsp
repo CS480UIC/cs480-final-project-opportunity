@@ -24,7 +24,7 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Academic_resourceServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-		<input type="hidden" name="academicId" value="${academic_resource.academicId }"/>
+		<input type="hidden" name="academicId" value="${academic_resource.academic_id }"/>
 		<input type="hidden" name="userId" value="${academic_resource.user_id }"/>
 	Title：<input type="text" name="title" value="${form.title }"/>
 	<span style="color: red; font-weight: 900">${errors.title }</span>
@@ -41,7 +41,7 @@
 	Academic Location	：<input type="text" name="acadLocation" value="${form.acad_location }"/>
 	<span style="color: red; font-weight: 900">${errors.acad_location }</span>
 	<br/>
-	<input type="submit" value="Entity1"/>
+	<input type="submit" value="Academic Resource"/>
 </form>
 
 </body>

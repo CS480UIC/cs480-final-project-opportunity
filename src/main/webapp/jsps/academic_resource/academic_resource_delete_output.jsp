@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Academic_resourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-	<input type="hidden" name="legalId" value="${academic_resource.academic_id }"/>
+	<input type="hidden" name="academicId" value="${academic_resource.academic_id }"/>
 	<input type="hidden" name="userId" value="${academic_resource.user_id }"/>
 	Academic ID    :<input type="text" name="academicId" value="${academic_resource.academic_id }" disabled/>
 	<br/>
@@ -41,7 +41,7 @@
 	<br/>
 	Academic Location	:<input type="text" name="acadLocation" value="${academic_resource.acad_location }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Academic Resource"/>
 </form>
 
 </body>

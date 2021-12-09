@@ -26,20 +26,22 @@
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
     <br>
- 	<a href="<c:url value='/findJobs'/>" target="body">Please list all the jobs with insurance benefits and salary larger than $70,000</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the jobs with insurance benefits and salary larger than $70,000</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findAll'/>" target="body">Please list all the scholarships with reward greater than $3,000 and have a deadline on 11/11/2021</a>&nbsp;&nbsp;
     <br>
  	<a href="<c:url value='/findTutor'/>" target="body">Please list all the tutors for grade levels higher than 9 and a fee less than $30</a>&nbsp;&nbsp;
  	<br>
- 	<a href="<c:url value='/findJobsAndCo'/>" target="body">Please list all the jobs and companies</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findAll'/>" target="body">Please list all the jobs and companies</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findTutorService'/>" target="body">Please list all the tutors and tutoring services</a>&nbsp;&nbsp;
  	<br>
- 	<a href="<c:url value='/findAll'/>" target="body">Please list all the users and legal services</a>&nbsp;&nbsp;
+ 	<a href="<c:url value='/findLRUser'/>" target="body">Please list all the users and legal services</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findAll'/>" target="body">Please list all the users linked to scholarships</a>&nbsp;&nbsp;
  	<br>
  	<a href="<c:url value='/findTotalTutors'/>" target="body">Please list the number of tutors per subject</a>&nbsp;&nbsp;
+ 	<br>
+ 	<a href="<c:url value='/findARUser'/>" target="body">Please list all the users linked to academic resources</a>&nbsp;&nbsp;
   </body>
 </html>
