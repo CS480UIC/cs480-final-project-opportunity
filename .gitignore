@@ -1,0 +1,5 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore META_INF folders
+*/META-INF/*
